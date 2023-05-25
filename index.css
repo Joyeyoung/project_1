@@ -1,0 +1,881 @@
+@font-face {
+  font-family: "SCDream3";
+  /* 사용하고 싶은 font-family명을 지정 */
+  src: url("./SCDream3.otf") format("opentype");
+  /* 폰트파일 불러오기 */
+}
+
+@font-face {
+  font-family: "SCDream5";
+  /* 사용하고 싶은 font-family명을 지정 */
+  src: url("./SCDream5.otf") format("opentype");
+  /* 폰트파일 불러오기 */
+}
+
+@font-face {
+  font-family: "SCDream7";
+  /* 사용하고 싶은 font-family명을 지정 */
+  src: url("./SCDream7.otf") format("opentype");
+  /* 폰트파일 불러오기 */
+}
+
+@font-face {
+  font-family: "SCDream9";
+  /* 사용하고 싶은 font-family명을 지정 */
+  src: url("./SCDream9.otf") format("opentype");
+  /* 폰트파일 불러오기 */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a{
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: "SCDream";
+  font-weight: 500;
+}
+
+ul {
+  list-style: none;
+}
+
+/* 토글메뉴 */
+
+.side-nav {
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  left: 0;
+  background-color: #545454;
+  position: fixed;
+  z-index: 999;
+  transition: all 1s ease;
+  margin-top: 50px;
+}
+
+.side-nav h2{
+  font-family: "SCDream7";
+  font-size: 16px;
+  padding: 20px;
+  letter-spacing :-4px; 
+  word-spacing: 5px;
+  writing-mode: vertical-lr;
+}
+
+.side-nav > .inner-nav {
+  overflow: hidden;
+}
+
+.side-nav > .live {
+  overflow: hidden;
+}
+
+.side-nav > .side-toggle {
+  position: absolute;
+  z-index: 999;
+  right: -63px;
+  background: black;
+  color: #ebebeb;
+  cursor: pointer;
+}
+
+.side-nav > .side-toggle:hover{
+  color: #fed700;
+}
+
+.show-nav.side-nav {
+  transition: all 1s ease;
+  width: 200px;
+}
+
+.main-content {
+  position: relative;
+  background: gray;
+}
+
+.live{
+  width: 200px;
+  background-color: #ebebeb;
+  margin: 0 auto;
+}
+
+.live img{
+  width: 200px;
+}
+
+.live h3{
+  padding: 5px;
+  font-family: "SCDream7";
+  font-size: 16px;
+  color: #da1717;
+}
+
+.live h4{
+  padding: 5px;
+  font-family: "SCDream5";
+  font-size: 13px;
+  color: #000;
+}
+
+.live p{
+  padding: 5px;
+  font-family: "SCDream3";
+  font-size: 13px;
+  color: #545454;
+}
+
+/* 네비게이션 */
+
+nav {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  z-index: 999;
+}
+
+.container{
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  background-color: black;
+  transition: .3s;
+}
+
+.container.show {
+  background-color: transparent;
+  transition: .3s;
+}
+
+nav .nav {
+  margin: 0 auto;
+  width: 1280px;
+  line-height: 50px;
+}
+
+nav .nav li {
+  width: 0 auto;
+  float: left;
+  color: white;
+  font-family: "SCDream5";
+  font-size: 14px;
+}
+
+nav .nav li:hover {
+  color: #fed700;
+}
+
+nav .sns_icon li {
+  float: right;
+  width: 0 auto;
+  padding-left: 15px;
+}
+
+nav .sns_icon li img {
+  width: 50px;
+  height: 50px;
+  background-color: #da1717;
+}
+
+nav .nav_line {
+  border: 1px solid #505050;
+  width: 0;
+  height: 30px;
+  margin: 10px 35px;
+}
+
+/* 업 버튼 */
+button {
+  position: relative;
+  z-index: 999;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.arrow-up {
+  position: fixed;
+  bottom: 60px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  color: white;
+  background-color: #000;
+  border-radius: 50%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.arrow-up span {
+  font-size: 24px;
+}
+
+.arrow-up.show {
+  opacity: 1;
+}
+
+/* 타이틀 */
+.title {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 1500px;
+  background-color: #fed700;
+  ;
+}
+
+.title .tit_img {
+  position: absolute;
+  z-index: 1;
+}
+
+.title .tit_img_1 {
+  right: -150px;
+  top: 350px;
+}
+
+.title .tit_img_2 {
+  right: 100px;
+  bottom: 0px;
+}
+
+.title .tit_img_3 {
+  left: 160px;
+  top: 100px;
+}
+
+.title .tit_img_4 {
+  right: 160px;
+  top: 50px;
+}
+
+.title .tit_but {
+  position: absolute;
+  z-index: 3;
+  top: 1000px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title .tit_but ul {
+  width: 1000px;
+  height: 600px;
+}
+
+.title .tit_but ul li {
+  width: 100%;
+  padding-bottom: 200px;
+}
+
+.title .tit_but ul .tit_but_l {
+  float: left;
+}
+
+.title .tit_but ul .tit_but_r button {
+  float: right;
+}
+
+.title .tit_but ul li button {
+  font-size: 18px;
+  font-family: "SCDream7";
+  text-align: center;
+  padding: 10px 15px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+
+.title .tit_but ul li button:hover {
+  color: #fed700;
+}
+
+.title .tit_intro {
+  width: 500px;
+  padding-top: 30px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title .tit_icon {
+  margin: 0 auto;
+  width: 46px;
+  height: 40px;
+  background-image: url(./img/tit_icon.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title .intro {
+  width: 400px;
+  margin-top: 20px;
+}
+
+.title .tit_intro h3 {
+  font-size: 16px;
+  font-family: "SCDream5";
+  margin-top: 20px;
+}
+
+.title .tit_intro h2 {
+  font-size: 24px;
+  font-family: "SCDream7";
+  font-weight: bold;
+  color: #fed700;
+  padding: 5px;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  margin-top: 20px;
+  transform: translateX(-5px);
+}
+
+.tit_back {
+  position: relative;
+  z-index: 0;
+}
+
+.tit_back .tit_content {
+  position: absolute;
+  width: 100%;
+  height: 1042px;
+  transform: translateY(32px);
+  background-color: #8d8d8d;
+}
+
+
+.tit_back .tit_content_img {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-image: url(./img/tit_content_img.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tit_back img {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+}
+
+.tit_back .tit_back_left {
+  bottom: -1px;
+  left: 0;
+}
+
+.tit_back .tit_back_right {
+  right: 0;
+}
+
+/* 지진 대피장소 */
+.shelter {
+  position: relative;
+  width: 100%;
+  height: 1100px;
+  background-color: #8d8d8d;
+  text-align: center;
+  background-image: url(./img/shelter_back.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top left;
+}
+
+.shelter .shelter_tit {
+  padding-top: 60px;
+}
+
+.shelter .shelter_img {
+  position: absolute;
+  left: 70px;
+  top: 20px;
+}
+
+.shelter .shelter_icon {
+  margin: 0 auto;
+  width: 46px;
+  height: 40px;
+  background-image: url(./img/tit_icon.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: invert(74%) sepia(93%) saturate(2304%) hue-rotate(8deg) brightness(112%) contrast(111%);
+}
+
+.shelter h2 {
+  margin-top: 20px;
+  font-size: 24px;
+  font-family: "SCDream9";
+  color: white;
+}
+
+.shelter h2 p {
+  display: inline-block;
+  color: #fed700;
+}
+
+.google {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.map {
+  margin: 0 auto;
+  width: 730px;
+  height: 250px;
+  box-shadow: 0px 5px 10px black;
+}
+
+/* 셀렉트 박스 */
+.selectBoxList {
+  display: flex;
+  width: 730px;
+  height: 80px;
+  margin: 0 auto;
+  background-color: #fed700;
+}
+
+.selectBoxList .box {
+  position: relative;
+  margin: 0 auto;
+  top: 25px;
+}
+
+.selectBox2 {
+  position: absolute;
+  z-index: 1;
+  width: 150px;
+  height: 50px;
+  border: 1px solid #8e8e8e;
+  background-color: #eeeeee;
+  background-size: 20px;
+  cursor: pointer;
+}
+
+.selectBox2:before {
+  content: '\142F';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
+  z-index: -1;
+}
+
+.selectBox2:after {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 35px;
+}
+
+.selectBox2 .label {
+  display: flex;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+  border: 0 none;
+  outline: 0 none;
+  padding-left: 15px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.selectBox2 .optionList {
+  background: #999999;
+  color: #fff;
+  list-style-type: none;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: .3s ease-in;
+}
+
+.selectBox2 .optionList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.selectBox2 .optionList::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.selectBox2 .optionList::-webkit-scrollbar-thumb {
+  background: #303030;
+  border-radius: 45px;
+}
+
+.selectBox2 .optionList::-webkit-scrollbar-thumb:hover {
+  background: #303030;
+}
+
+.selectBox2.active {
+  z-index: 10;
+}
+
+.selectBox2.active .optionList {
+  max-height: 500px;
+}
+
+.selectBox2 .optionItem {
+  border-bottom: 1px dashed #f9f9f9;
+  padding: 5px 15px 5px;
+  transition: .1s;
+}
+
+.selectBox2 .optionItem:hover {
+  background: #eeeeee;
+}
+
+.selectBox2 .optionItem:last-child {
+  border-bottom: 0 none;
+}
+
+#searchBtn {
+  width: 150px;
+  height: 50px;
+  color: #f9f9f9;
+  background-color: #000;
+}
+
+/* 테이블 */
+.table {
+  margin: 0 auto;
+  width: 730px;
+  height: 170px;
+  background-color: #ebebeb;
+}
+
+form {
+  width: 730px;
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+th,
+td {
+  padding: 3px 10px;
+}
+
+.off-screen {
+  display: none;
+}
+
+#nav {
+  width: 1280px;
+  text-align: center;
+}
+
+#nav a {
+  display: inline-block;
+  padding: 3px 5px;
+  margin-right: 10px;
+  font-family: Tahoma;
+  background: #ccc;
+  color: #000;
+  text-decoration: none;
+}
+
+#nav a.active {
+  background: #333;
+  color: #fff;
+}
+
+.table p {
+  float: left;
+}
+
+.table h4 {
+  float: right;
+}
+
+/* 지진 더 살펴보기 */
+.sns_page{
+  position: relative;
+  background-color: #8d8d8d;
+  text-align: center;
+  height: 750px;
+}
+
+.sns_page .sns_page_back{
+  position: absolute;
+  z-index: 0;
+}
+
+.sns_page .sns_page_l{
+  top: 0;
+  left: 0;
+}
+
+.sns_page .sns_page_r{
+  top: 0;
+  right: 0;
+}
+
+.sns_page img.person_1{
+  position: absolute;
+  width: 195px;
+  top: 70px;
+  right: 120px;
+}
+
+.sns_page img.person_2{
+  position: absolute;
+  width: 205px;
+  bottom: 80px;
+  left: 120px;
+}
+
+.sns_page h2 {
+  padding-top: 60px;
+  font-size: 24px;
+  font-family: "SCDream9";
+  color: white;
+}
+
+.sns_page h2 p {
+  display: inline-block;
+  color: #fed700;
+}
+
+.sns_page .sns{
+  display: flex;
+  justify-content: center;
+}
+
+.sns_page .content_1,
+.sns_page .content_2{
+  float: left;
+  margin-top: 60px;
+  padding: 10px;
+}
+
+.sns_page .content_1{
+  width: 520px;
+}
+
+.sns_page .content_1 li{
+  float: left;
+}
+
+.sns_page .content_1 .page_link{
+  margin-top: 60px;
+}
+
+.sns_page .content_1 .page_link img{
+  width: 25px;
+  filter: invert(74%) sepia(93%) saturate(2304%) hue-rotate(8deg) brightness(112%) contrast(111%);
+}
+
+.sns_page .content_1 .page_link .page_link_tit{
+  width: 100%;
+  text-align: left;
+}
+
+.sns_page .content_1 .page_link h3{
+  display: inline-block;
+  color: #fed700;
+  font-size: 16px;
+  font-family: "SCDream7";
+  margin-left: 15px;
+  margin-bottom: 10px;
+  transform: translateY(-7px);
+}
+
+.sns_page .content_1 .page_link button{
+  display: inline-block;
+  text-align: center;
+  width: 230px;
+  height: 50px;
+  background-color: #545454;
+  border: none;
+  margin-right: 15px;
+}
+
+.sns_page .content_1 .page_link button h4{
+  font-size: 16px;
+  font-family: "SCDream7";
+  color: white;
+}
+
+.sns_page .content_1 .page_link button p{
+  display: inline-block;
+  color: #8d8d8d;
+}
+
+.sns_page .content_2{
+  width: 520px;
+  height: 420px;
+  text-align: left;
+}
+
+.sns_page .content_2 li{
+  display: inline-block;
+}
+
+.sns_page .content_2 li .sns_box img{
+  width: 160px;
+  height: 160px;
+  background-color: #000;
+  float: left;
+  margin-right: 9px;
+  margin-bottom: 9px;
+}
+
+.sns_page .content_2 li .sns_icon_round{
+  margin-top: 55px;
+}
+
+.sns_page .content_2 li .sns_icon_round li{
+  margin-right: 5px;
+}
+
+.sns_page .content_2 li .sns_icon_round img{
+  width: 50px;
+  height: 50px;
+  background-color: #545454;
+  border-radius: 5rem;
+  display: inline-block;
+}
+
+/* 지진피해 기부 안내 */
+
+.donation{
+  height: 500px;
+  background-image: url(./img/donation_back.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  clear: both;
+  text-align: center;
+}
+
+.donation .donation_icon{
+  padding-top: 100px;
+}
+
+.donation h2{
+  margin-top: 35px;
+  font-family: "SCDream9";
+  font-size: 24px;
+  color: white;
+}
+
+.donation .donation_but{
+  margin-top: 80px;
+}
+
+.donation .donation_but li{
+  display: inline-block;
+  padding: 20px;
+}
+
+.donation .donation_but div{
+  width: 250px;
+  height: 70px;
+  background-color: #ebebeb;
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+}
+
+.donation .donation_but div img{
+  object-fit: none;
+  width: 150px;
+}
+
+/* 흐르는 텍스트 */
+.flow-container {
+  border: #000 solid 5px;
+  border-left-style: solid;
+  border-bottom-style: solid;
+  border-left-style: none;
+  border-right-style: none;
+}
+
+.flow-text {
+  display: flex;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: 0.3s;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "SCDream9";
+  color: black;
+  background-color: #fed700;
+  padding: 5px 0;
+}
+
+.flow-text:hover {
+  color: #000;
+}
+
+.flow-text:hover .flow-wrap {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+.flow-wrap {
+  animation: textLoop 50s linear infinite;
+  padding-right: 1.4881vw;
+}
+
+@keyframes textLoop {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+/* 푸터 */
+footer {
+  height: 500px;
+  background-color: #8e8e8e;
+}
+
+footer ul {
+  display: inline-block;
+  text-align: left;
+}
+
+footer .footer_nav {
+  text-align: center;
+  width: 100%;
+}
+
+footer p {
+  text-align: center;
+}
+
+footer .fo_4 li{
+  display: inline-block;
+}
+
+footer .fo_4 img{
+ width: 50px;
+ height: 50px;
+ background-color: #000;
+}

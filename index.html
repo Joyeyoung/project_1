@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>지진예방사이트</title>
+    <script src="./jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+
+    <!-- 업 버튼 -->
+    <button class="arrow-up show">
+        <span class="material-symbols-outlined">
+            &#9650;
+        </span>
+    </button>
+
+    <script src="upbut.js"></script>
+
+    <!-- 네비게이션 -->
+    <nav>
+        <div class="container">
+            <ul class="nav">
+                <a href="#con_1">
+                    <li>지진 행동요령</li>
+                </a>
+                <li>
+                    <div class="nav_line"></div>
+                </li>
+                <a href="#con_2">
+                    <li>지진 대피장소</li>
+                </a>
+                <li>
+                    <div class="nav_line"></div>
+                </li>
+                <a href="#con_3">
+                    <li>지진 더 살펴보기</li>
+                </a>
+                <li>
+                    <div class="nav_line"></div>
+                </li>
+                <a href="#con_4">
+                    <li>지진피해 기부 안내</li>
+                </a>
+    
+                <ul class="sns_icon">
+                    <li><img src="" alt=""></li>
+                    <li><img src="" alt=""></li>
+                    <li><img src="" alt=""></li>
+                    <li><img src="" alt=""></li>
+                </ul>
+            </ul>
+        </div>
+       
+    </nav>
+
+    <script src="nav.js"></script>
+
+            <!-- 토글메뉴 -->
+
+            <div class="side-nav">
+                <div class="side-toggle">
+                  <h2>실시간 지진현황</h2>
+                </div>
+                
+                <div class="inner-nav">
+                    <div class="live"><img src="./img/toggle_img.jpg" alt="">
+                        <h3>진도 3.4 규모 지진</h3>
+                        <h4>미국 캘리포니아 퍼시비카(으)로부터 2km </h4>
+                        <p>3월 28일 오후 10:01</p>
+                    </div>
+                </div>
+              </div>
+              
+              <div class="main-content">        
+              </div>
+        
+            <script src="toggle_menu.js"></script>
+    
+
+    <!-- 타이틀 -->
+    <section class="title">
+
+        <img class="tit_img tit_img_1" src="./img/tit_img_1.png" alt="">
+        <img class="tit_img tit_img_2" src="./img/tit_img_2.png" alt="">
+        <img class="tit_img tit_img_3" src="./img/tit_img_3.png" alt="">
+        <img class="tit_img tit_img_4" src="./img/tit_img_4.png" alt="">
+
+        <div class="tit_but">
+            <ul>
+                <li class="tit_but_r"><button>지진 전조증상 &#43;</button></li>
+                <li class="tit_but_l"><button>지진 발생 시 &#43;</button></li>
+                <li class="tit_but_r"><button>지진 대피 후 &#43;</button></li>
+            </ul>
+        </div>
+
+        <div class="tit_intro">
+            <div class="tit_icon"></div>
+            <h3>2023 방심할 수 없는 재난의 위협</h3>
+            <img class="intro" src="./img/intro.png" alt="">
+            <h2>예방 수칙 및 대피 방법에 대해 함께 배워요!</h2>
+        </div>
+
+        <div class="tit_back">
+            <div class="tit_content">
+                <div class="tit_content_img"></div>
+                <img class="tit_back_left" src="./img/tit_back_left.png" alt="">
+                <img class="tit_back_right" src="./img/tit_back_right.png" alt="">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 지진 대피장소 -->
+    <section class="shelter">
+        <div class="shelter_tit">
+            <div class="shelter_icon"></div>
+            <h2>지진 <p>대피장소</p>
+            </h2>
+            <img class="shelter_img" src="./img/tit_img_5.png" alt="">
+        </div>
+
+        <iframe class="google"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25554.473924205984!2d127.09138827431636!3d36.81110900000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b2924299ec417%3A0x20b45ce44007ec2b!2z7KeA7KeE7Jil7Jm464yA7ZS87J6l7IaMKOyMjeyaqeqzteybkCk!5e0!3m2!1sko!2skr!4v1684911281567!5m2!1sko!2skr"
+            width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <div class="map">
+            <!-- 셀렉트 박스 -->
+            <div class="selectBoxList">
+                <!-- selectBox1 -->
+                <div class="box">
+                    <div class="selectBox2 ">
+                        <button class="label">시도전체</button>
+                        <ul class="optionList">
+                            <li class="optionItem">apple</li>
+                            <li class="optionItem">orange</li>
+                            <li class="optionItem">grape</li>
+                            <li class="optionItem">melon</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- selectBox2 -->
+                <div class="box">
+                    <div class="selectBox2  ">
+                        <button class="label">시군구전체</button>
+                        <ul class="optionList">
+                            <li class="optionItem">Red</li>
+                            <li class="optionItem">orange</li>
+                            <li class="optionItem">purple</li>
+                            <li class="optionItem">green</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- selectBox3 -->
+                <div class="box">
+                    <div class="selectBox2  ">
+                        <button class="label">읍면동전체</button>
+                        <ul class="optionList">
+                            <li class="optionItem">pizza</li>
+                            <li class="optionItem">ramen</li>
+                            <li class="optionItem">kimchi</li>
+                            <li class="optionItem">somori gukbob</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <input type="submit" id="searchBtn" name="searchBtn" value="검색">
+                </div>
+            </div>
+
+            <script src="selectbox.js"></script>
+
+            <!-- 테이블 -->
+            <div class="table">
+                <table id="products" border="1">
+                    <caption>
+                        <form action="" id="setRows">
+                            <p>
+                                <input type="text" name="rowPerPage" value="3" style="display: none">
+                            </p>
+                        </form>
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th>시설구분</th>
+                            <th>시설명</th>
+                            <th>상세주소</th>
+                            <th>수용가능면적</th>
+                            <th>연락처</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Clothing</td>
+                            <td>Jacket</td>
+                            <td>Jacket</td>
+                            <td>Jacket</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>life</td>
+                            <td>dish</td>
+                            <td>dish</td>
+                            <td>dish</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Clothing</td>
+                            <td>shocks</td>
+                            <td>shocks</td>
+                            <td>shocks</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Clothing</td>
+                            <td>shocks</td>
+                            <td>shocks</td>
+                            <td>shocks</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Clothing</td>
+                            <td>shocks</td>
+                            <td>shocks</td>
+                            <td>shocks</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Clothing</td>
+                            <td>shocks</td>
+                            <td>shocks</td>
+                            <td>shocks</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Clothing</td>
+                            <td>shocks</td>
+                            <td>shocks</td>
+                            <td>shocks</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Clothing</td>
+                            <td>shocks</td>
+                            <td>shocks</td>
+                            <td>shocks</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Clothing</td>
+                            <td>shocks</td>
+                            <td>shocks</td>
+                            <td>shocks</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Clothing</td>
+                            <td>shocks</td>
+                            <td>shocks</td>
+                            <td>shocks</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Clothing</td>
+                            <td>shocks</td>
+                            <td>shocks</td>
+                            <td>shocks</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+            <script src="./table.js"></script>
+        </div>
+
+    </section>
+
+    <!-- 지진 더 살펴보기 -->
+    <section class="sns_page">
+        <h2>지진 <p>더 살펴보기</p>
+        </h2>
+
+        <img class="sns_page_back sns_page_l" src="./img/sns_page_l.png" alt="">
+        <img class="sns_page_back sns_page_r" src="./img/sns_page_r.png" alt="">
+        <img class="person_1" src="./img/person_1.png" alt="">
+        <img class="person_2" src="./img/person_2.png" alt="">
+
+        <div class="sns">
+            <ul class="content_1">
+                <li><iframe class="youtube" width="520" height="290" src="https://www.youtube.com/embed/KcVjX3_dK0A"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe></li>
+                <li>
+                    <ul class="page_link">
+                        <li class="page_link_tit">
+                            <img src="./img/hex_icon_2.png" alt="">
+                            <h3>그 외 재난 정보 자세히 알아보려면 </h3>
+                        </li>
+                        <li>
+                            <button>
+                                <h4>국민재난안전포털 <p>바로가기 ▶</p>
+                                </h4>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <h4>기상청 날씨누리 <p>바로가기 ▶</p>
+                                </h4>
+                            </button>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="content_2">
+                <li>
+                    <ul class="sns_box">
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="sns_icon_round">
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 지진피해 기부 안내 -->
+    <section class="donation">
+        <img class="donation_icon" src="./img/donation_icon.png" alt="">
+        <h2>“지진 피해 복구에 동참하고, 희망과 재건의 길을 열어주세요”</h2>
+        <ul class="donation_but">
+            <li>
+                <div><img src="./img/donation_but_1.png" alt=""></div>
+            </li>
+            <li>
+                <div><img class="but_1" src="./img/donation_but_2.png" alt=""></div>
+            </li>
+            <li>
+                <div><img class="but_1" src="./img/donation_but_3.png" alt=""></div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 흐르는 텍스트 -->
+    <div class="flow-container">
+        <a href="#">
+            <div class="flow-text">
+                <div class="flow-wrap">&nbsp;&nbsp;&nbsp;지진! 예방 수칙 및 대피 방법에 대해 함께 배워요!&nbsp;&nbsp;&nbsp;</div>
+                <div class="flow-wrap">&nbsp;&nbsp;&nbsp;지진! 예방 수칙 및 대피 방법에 대해 함께 배워요!&nbsp;&nbsp;&nbsp;</div>
+                <div class="flow-wrap">&nbsp;&nbsp;&nbsp;지진! 예방 수칙 및 대피 방법에 대해 함께 배워요!&nbsp;&nbsp;&nbsp;</div>
+                <div class="flow-wrap">&nbsp;&nbsp;&nbsp;지진! 예방 수칙 및 대피 방법에 대해 함께 배워요!&nbsp;&nbsp;&nbsp;</div>
+                <div class="flow-wrap">&nbsp;&nbsp;&nbsp;지진! 예방 수칙 및 대피 방법에 대해 함께 배워요!&nbsp;&nbsp;&nbsp;</div>
+            </div>
+        </a>
+    </div>
+
+    <!-- 푸터 -->
+    <footer id="footer">
+        <div class="footer_nav">
+            <ul class="fo_1">
+                <li>
+                    <h2>지진 예방 사이트</h2>
+                </li>
+                <li>
+                    <h3>PC, 모바일에 사이즈에
+                        최적화 되어 있습니다
+                    </h3>
+                </li>
+            </ul>
+            <ul class="fo_2">
+                <li>
+                    <h4>제작자 이지수, 조예영</h4>
+                </li>
+                <li>
+                    <h4>참고 사이트 기상청, 국민안전처</h4>
+                </li>
+                <li>
+                    <h4>사용폰트 에스코어 드림</h4>
+                </li>
+            </ul>
+            <ul class="fo_3">
+                <a href="#con_4">
+                    <li>
+                        <h4>지진 행동요령</h4>
+                    </li>
+                </a>
+                <a href="#con_5">
+                    <li>
+                        <h4>지진 대피장소</h4>
+                    </li>
+                </a>
+                <a href="#con_6">
+                    <li>
+                        <h4>지진 더 살펴보기</h4>
+                    </li>
+                </a>
+                <a href="#con_7">
+                    <li>
+                        <h4>지진피해 기부안내</h4>
+                    </li>
+                </a>
+            </ul>
+            <ul class="fo_4">
+                <li>
+                    <img src="" alt="">
+                </li>
+                <li>
+                    <img src="" alt="">
+                </li>
+                <li>
+                    <img src="" alt="">
+                </li>
+                <li>
+                    <img src="" alt="">
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <p>본 사이트는 상업적 용도가 아닌 공모전 전용 사이트 입니다.</p>
+    </footer>
+</body>
+
+</html>
