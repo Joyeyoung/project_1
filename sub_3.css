@@ -1,0 +1,237 @@
+@font-face {
+    font-family: "SCDream3";
+    /* 사용하고 싶은 font-family명을 지정 */
+    src: url("./SCDream3.otf") format("opentype");
+    /* 폰트파일 불러오기 */
+}
+
+@font-face {
+    font-family: "SCDream5";
+    /* 사용하고 싶은 font-family명을 지정 */
+    src: url("./SCDream5.otf") format("opentype");
+    /* 폰트파일 불러오기 */
+}
+
+@font-face {
+    font-family: "SCDream7";
+    /* 사용하고 싶은 font-family명을 지정 */
+    src: url("./SCDream7.otf") format("opentype");
+    /* 폰트파일 불러오기 */
+}
+
+@font-face {
+    font-family: "SCDream9";
+    /* 사용하고 싶은 font-family명을 지정 */
+    src: url("./SCDream9.otf") format("opentype");
+    /* 폰트파일 불러오기 */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+img {
+    -webkit-user-drag: none;
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 1080px;
+    background-color: #fed700;
+    text-align: center;
+}
+
+h2 {
+    transform: translateY(65px);
+    font-family: "SCDream9";
+    font-size: 24px;
+    color: #000;
+}
+
+p {
+    font-family: "SCDream3";
+    font-size: 24px;
+    display: inline-block;
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+}
+
+nav ul {
+    position: relative;
+    z-index: 3;
+    top: 135px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    font-size: 18px;
+    font-family: "SCDream7";
+    color: #ebebeb;
+    padding: 15px 25px;
+    background-color: #545454;
+    margin: -3px
+}
+
+nav ul li div {
+    margin: 0 auto;
+    width: 0px;
+    height: 0px;
+    border-top: 30px solid #000;
+    border-right: 30px solid transparent;
+    border-left: 30px solid transparent;
+    opacity: 0;
+}
+
+#te:hover {
+    color: #fed700;
+    background-color: #000;
+}
+
+#te:hover+#tr {
+    opacity: 1;
+}
+
+a.home_but {
+    position: fixed;
+    z-index: 999;
+    top: 250px;
+    left: 100px;
+
+}
+
+a.home_but div {
+    width: 60px;
+    height: 60px;
+    border-radius: 5rem;
+    background-color: #000;
+}
+
+a.home_but div img {
+    width: 35px;
+    margin-top: 13px;
+}
+
+a.home_but div img:hover {
+    filter: brightness(0) invert(79%) sepia(96%) saturate(1297%) hue-rotate(335deg) brightness(100%) contrast(92%);
+}
+
+.content {
+    position: relative;
+    top: 47px;
+    height: 1000px;
+    background-color: #8d8d8d;
+}
+
+.content h1 {
+    font-size: 24px;
+    color: #ebebeb;
+    font-family: "SCDream3";
+    padding-top: 180px;
+}
+
+.content h1 p {
+    color: #fed700;
+    font-family: "SCDream9";
+}
+
+.content .sub_1_left {
+    position: absolute;
+    left: 0;
+    top: -149px;
+}
+
+.content .sub_1_right {
+    position: absolute;
+    right: 0;
+    top: -53px;
+}
+
+.main {
+    position: relative;
+    z-index: 99;
+    width: 1280px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.main_left{
+    float: left;
+    transform: translateY(30px);
+}
+
+.main_right{
+    float: right;
+}
+
+.main_left,.main_right{
+    width: 50%;
+}
+
+.main li{
+    margin: 75px 0;
+}
+
+.main li img {
+    display: inline-block;
+    object-fit: none;
+}
+
+.main_tex{
+    display: inline-block;
+    width: 250px;
+    transform: translateY(-30px);
+}
+
+.main_tex h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-family: "SCDream7";
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5rem;
+    background-color: #000;
+    color: #fed700;
+}
+
+.main_tex h4 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: "SCDream7";
+    color: #ebebeb;
+    letter-spacing :-0.5px;
+    padding: 0 10px;
+}

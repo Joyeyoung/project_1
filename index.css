@@ -35,16 +35,22 @@ html {
   scroll-behavior: smooth;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
 body {
-  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-  font-family: "SCDream";
-  font-weight: 500;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
+}
+
+img{
+  -webkit-user-drag: none;
 }
 
 ul {
@@ -55,7 +61,7 @@ ul {
 
 .side-nav {
   display: inline-block;
-  width: 0px;
+  max-width: 0px;
   height: 0px;
   left: 0;
   background-color: #545454;
@@ -65,24 +71,25 @@ ul {
   margin-top: 50px;
 }
 
-.side-nav h2{
+.side-nav h2 {
   font-family: "SCDream7";
-  font-size: 16px;
-  padding: 20px;
-  letter-spacing :-4px; 
+  font-size: 14px;
+  padding: 22px;
+  letter-spacing: -3.5px;
   word-spacing: 5px;
   writing-mode: vertical-lr;
 }
 
-.side-nav > .inner-nav {
+.side-nav>.inner-nav {
+  overflow: hidden;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.side-nav>.live {
   overflow: hidden;
 }
 
-.side-nav > .live {
-  overflow: hidden;
-}
-
-.side-nav > .side-toggle {
+.side-nav>.side-toggle {
   position: absolute;
   z-index: 999;
   right: -63px;
@@ -91,13 +98,13 @@ ul {
   cursor: pointer;
 }
 
-.side-nav > .side-toggle:hover{
+.side-nav>.side-toggle:hover {
   color: #fed700;
 }
 
 .show-nav.side-nav {
   transition: all 1s ease;
-  width: 200px;
+  max-width: 200px;
 }
 
 .main-content {
@@ -105,31 +112,31 @@ ul {
   background: gray;
 }
 
-.live{
-  width: 200px;
+.live {
+  max-width: 200px;
   background-color: #ebebeb;
   margin: 0 auto;
 }
 
-.live img{
+.live img {
   width: 200px;
 }
 
-.live h3{
+.live h3 {
   padding: 5px;
   font-family: "SCDream7";
   font-size: 16px;
   color: #da1717;
 }
 
-.live h4{
+.live h4 {
   padding: 5px;
   font-family: "SCDream5";
   font-size: 13px;
   color: #000;
 }
 
-.live p{
+.live p {
   padding: 5px;
   font-family: "SCDream3";
   font-size: 13px;
@@ -145,7 +152,7 @@ nav {
   z-index: 999;
 }
 
-.container{
+.container {
   position: fixed;
   height: 50px;
   width: 100%;
@@ -165,7 +172,7 @@ nav .nav {
 }
 
 nav .nav li {
-  width: 0 auto;
+  margin: 0 auto;
   float: left;
   color: white;
   font-family: "SCDream5";
@@ -176,22 +183,40 @@ nav .nav li:hover {
   color: #fed700;
 }
 
+nav .sns_icon .sns_1{
+  padding-left: 50px;
+}
+
+nav .sns_icon .sns_2{
+  padding-left: 48px;
+}
+
+nav .sns_icon .sns_3{
+  padding-left: 46px;
+}
+
 nav .sns_icon li {
   float: right;
-  width: 0 auto;
-  padding-left: 15px;
+  margin: 0 auto;
+  width: 10px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 nav .sns_icon li img {
-  width: 50px;
-  height: 50px;
-  background-color: #da1717;
+object-fit: none;
+opacity: 0.5;
+}
+
+nav .sns_icon li img:hover{
+  opacity: 1;
 }
 
 nav .nav_line {
   border: 1px solid #505050;
   width: 0;
-  height: 30px;
+  height: 25px;
   margin: 10px 35px;
 }
 
@@ -219,6 +244,10 @@ button {
   transition: opacity .3s;
 }
 
+.arrow-up:hover{
+  color: #fed700;
+}
+
 .arrow-up span {
   font-size: 24px;
 }
@@ -243,12 +272,14 @@ button {
 }
 
 .title .tit_img_1 {
-  right: -150px;
+  width: 650px;
+  right: 0px;
   top: 350px;
 }
 
 .title .tit_img_2 {
-  right: 100px;
+  width: 200px;
+  right: 150px;
   bottom: 0px;
 }
 
@@ -300,6 +331,8 @@ button {
 
 .title .tit_but ul li button:hover {
   color: #fed700;
+  transform: translateY(-5px);
+  transition: .5s;
 }
 
 .title .tit_intro {
@@ -335,7 +368,7 @@ button {
   font-weight: bold;
   color: #fed700;
   padding: 5px;
-  width: 100%;
+  height: 33px;
   background-color: black;
   text-align: center;
   margin-top: 20px;
@@ -348,7 +381,7 @@ button {
 }
 
 .tit_back .tit_content {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 1042px;
   transform: translateY(32px);
@@ -366,6 +399,108 @@ button {
   background-position: center;
 }
 
+.tit_back .tit_content_img_1{
+  width: 100%;
+  object-fit: none;
+  top: -700px;
+  left: 150px;
+}
+
+.tit_back .wave_main{
+  position: relative;
+  z-index: 10;
+  left: 300px;
+  top: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.tit_back .wave{
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10rem;
+}
+
+.tit_back .wave_1{
+  width: 100%;
+  height: 100%;
+  animation: wave 3s ease infinite; /* 애니메이션 적용 */
+}
+
+.tit_back .wave_2{
+  width: 80%;
+  height: 80%;
+  animation: wave 3s ease infinite; /* 애니메이션 적용 */
+}
+
+.tit_back .wave_3{
+  width: 50%;
+  height: 50%;
+  animation: wave 3s ease infinite; /* 애니메이션 적용 */
+}
+
+@keyframes wave {
+	from {
+    opacity: 1;
+    transform: scale(0);
+	}
+	to {
+    opacity: 0;
+    transform: scale(1);
+	}
+}
+
+.tit_back .tit_content_img_2{
+  width: 100%;
+  object-fit: none;
+  top: -650px;
+  right: 200px;
+}
+
+.tit_back .fire_1{
+  width: 100%;
+  object-fit: none;
+  top: -850px;
+  right: 115px;
+  animation: fire 2s infinite; /* 애니메이션 적용 */
+}
+
+.tit_back .fire_2{
+  width: 100%;
+  z-index: 0;
+  object-fit: none;
+  top: -680px;
+  right: 290px;
+  animation: fire 2s infinite; /* 애니메이션 적용 */
+}
+
+@keyframes fire {
+  0%   {transform: rotate(5deg);}
+  50% {transform: rotate(-5deg);}
+  100% {transform: rotate(5deg);}
+}
+
+
+.tit_back .tit_content_img_3{
+  width: 100%;
+  object-fit: none;
+  top: 100px;
+  left: 200px;
+}
+
+.tit_back .desk{
+  z-index: 0;
+  width: 100%;
+  object-fit: none;
+  top: 250px;
+  left: 200px;
+}
+
+
 .tit_back img {
   position: absolute;
   z-index: 1;
@@ -381,11 +516,22 @@ button {
   right: 0;
 }
 
+.desk{
+  animation: desk 1s infinite; /* 애니메이션 적용 */
+}
+
+@keyframes desk {
+  0%   { transform: translateX( 1px )}
+  50% { transform: translateX( -1px )}
+  100% { transform: translateX( 1px )}
+}
+
+
 /* 지진 대피장소 */
 .shelter {
   position: relative;
   width: 100%;
-  height: 1100px;
+  height: 1150px;
   background-color: #8d8d8d;
   text-align: center;
   background-image: url(./img/shelter_back.png);
@@ -400,8 +546,9 @@ button {
 
 .shelter .shelter_img {
   position: absolute;
-  left: 70px;
-  top: 20px;
+  width: 100px;
+  left: 50px;
+  top: 12px;
 }
 
 .shelter .shelter_icon {
@@ -433,44 +580,44 @@ button {
 
 .map {
   margin: 0 auto;
-  width: 730px;
-  height: 250px;
-  box-shadow: 0px 5px 10px black;
+  width: 750px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* 셀렉트 박스 */
 .selectBoxList {
   display: flex;
-  width: 730px;
+  width: 750px;
   height: 80px;
   margin: 0 auto;
-  background-color: #fed700;
+  background-color: #ebebeb;
 }
 
 .selectBoxList .box {
   position: relative;
-  margin: 0 auto;
+  width: 750px;
   top: 25px;
+  left: 20px;
 }
 
 .selectBox2 {
   position: absolute;
   z-index: 1;
-  width: 150px;
-  height: 50px;
+  width: 170px;
+  height: 30px;
   border: 1px solid #8e8e8e;
-  background-color: #eeeeee;
-  background-size: 20px;
+  background-color: #ebebeb;
   cursor: pointer;
 }
 
 .selectBox2:before {
-  content: '\142F';
+  content: '\25BC';
   position: absolute;
-  top: 50%;
+  top: 14px;
   transform: translateY(-50%);
-  right: 5px;
+  right: 10px;
   z-index: -1;
+  color: #545454;
 }
 
 .selectBox2:after {
@@ -493,12 +640,17 @@ button {
   padding-left: 15px;
   background: transparent;
   cursor: pointer;
+  font-size: 12px;
+  font-family: "SCDream5";
+  color: #545454;
 }
 
 .selectBox2 .optionList {
   background: #999999;
   color: #fff;
   list-style-type: none;
+  font-family: "SCDream3";
+  font-size: 14px;
   padding: 0;
   max-height: 0;
   overflow: hidden;
@@ -527,11 +679,12 @@ button {
 }
 
 .selectBox2.active .optionList {
-  max-height: 500px;
+  max-height: 300px;
+  overflow-y: scroll; height:300px;
 }
 
 .selectBox2 .optionItem {
-  border-bottom: 1px dashed #f9f9f9;
+  border-bottom: 1px solid #ccc;
   padding: 5px 15px 5px;
   transition: .1s;
 }
@@ -545,32 +698,76 @@ button {
 }
 
 #searchBtn {
-  width: 150px;
-  height: 50px;
+  width: 100px;
+  height: 32px;
+  font-family: "SCDream7";
+  font-size: 14px;
   color: #f9f9f9;
   background-color: #000;
+  border: none;
+}
+
+#searchBtn:hover{
+  color: #fed700;
 }
 
 /* 테이블 */
 .table {
   margin: 0 auto;
-  width: 730px;
-  height: 170px;
+  width: 750px;
   background-color: #ebebeb;
 }
 
 form {
-  width: 730px;
+  width: 750px;
 }
 
 table {
-  border-collapse: collapse;
-  margin-bottom: 10px;
+  width: 100%;
+  border-collapse : collapse;
+  border-bottom : 1px solid #545454;
 }
 
 th,
 td {
-  padding: 3px 10px;
+  border-top : 1px solid #545454;
+  color: #545454;
+}
+
+th{
+  padding: 10px 0;
+  color: #000;
+  text-align: center;
+  font-family: "SCDream9";
+  font-size: 14px;
+}
+
+.t_1{
+  width: 15%;
+}
+
+.t_2{
+  width: 15%;
+}
+
+.t_3{
+  width: 40%;
+}
+
+.t_4{
+  width: 15%;
+}
+
+.t_5{
+  width: 15%;
+}
+
+td{
+  padding: 6px;
+  text-align: left;
+  font-family: "SCDream5";
+  font-weight: normal;
+  font-size: 14px;
 }
 
 .off-screen {
@@ -580,16 +777,20 @@ td {
 #nav {
   width: 1280px;
   text-align: center;
+  padding-bottom: 10px;
 }
 
 #nav a {
   display: inline-block;
-  padding: 3px 5px;
+  padding: 5px 10px;
+  margin-top: 10px;
   margin-right: 10px;
   font-family: Tahoma;
   background: #ccc;
   color: #000;
   text-decoration: none;
+  font-family: "SCDream7";
+  font-size: 14px;
 }
 
 #nav a.active {
@@ -597,48 +798,40 @@ td {
   color: #fff;
 }
 
-.table p {
-  float: left;
-}
-
-.table h4 {
-  float: right;
-}
-
 /* 지진 더 살펴보기 */
-.sns_page{
+.sns_page {
   position: relative;
   background-color: #8d8d8d;
   text-align: center;
   height: 750px;
 }
 
-.sns_page .sns_page_back{
+.sns_page .sns_page_back {
   position: absolute;
   z-index: 0;
 }
 
-.sns_page .sns_page_l{
+.sns_page .sns_page_l {
   top: 0;
   left: 0;
 }
 
-.sns_page .sns_page_r{
+.sns_page .sns_page_r {
   top: 0;
   right: 0;
 }
 
-.sns_page img.person_1{
+.sns_page img.person_1 {
   position: absolute;
   width: 195px;
   top: 70px;
   right: 120px;
 }
 
-.sns_page img.person_2{
+.sns_page img.person_2 {
   position: absolute;
   width: 205px;
-  bottom: 80px;
+  top: 80px;
   left: 120px;
 }
 
@@ -654,82 +847,89 @@ td {
   color: #fed700;
 }
 
-.sns_page .sns{
+.sns_page .sns {
   display: flex;
   justify-content: center;
 }
 
 .sns_page .content_1,
-.sns_page .content_2{
+.sns_page .content_2 {
   float: left;
   margin-top: 60px;
   padding: 10px;
 }
 
-.sns_page .content_1{
+.sns_page .content_1 {
   width: 520px;
 }
 
-.sns_page .content_1 li{
+.sns_page .content_1 li {
   float: left;
 }
 
-.sns_page .content_1 .page_link{
+.sns_page .content_1 .page_link {
   margin-top: 60px;
 }
 
-.sns_page .content_1 .page_link img{
+.sns_page .content_1 .page_link img {
   width: 25px;
   filter: invert(74%) sepia(93%) saturate(2304%) hue-rotate(8deg) brightness(112%) contrast(111%);
 }
 
-.sns_page .content_1 .page_link .page_link_tit{
+.sns_page .content_1 .page_link .page_link_tit {
   width: 100%;
   text-align: left;
 }
 
-.sns_page .content_1 .page_link h3{
+.sns_page .content_1 .page_link img{
+  width: 20px;
+}
+
+.sns_page .content_1 .page_link h3 {
   display: inline-block;
   color: #fed700;
   font-size: 16px;
   font-family: "SCDream7";
-  margin-left: 15px;
-  margin-bottom: 10px;
-  transform: translateY(-7px);
+  margin-left: 5px;
+  margin-bottom: 15px;
+  transform: translateY(-3px);
 }
 
-.sns_page .content_1 .page_link button{
+.sns_page .content_1 .page_link button {
   display: inline-block;
   text-align: center;
-  width: 230px;
-  height: 50px;
-  background-color: #545454;
+  padding: 12px;
+  background-color:#545454;
   border: none;
   margin-right: 15px;
 }
 
-.sns_page .content_1 .page_link button h4{
-  font-size: 16px;
+.sns_page .content_1 .page_link button h4 {
+  font-size: 14px;
   font-family: "SCDream7";
   color: white;
 }
 
-.sns_page .content_1 .page_link button p{
+.sns_page .content_1 .page_link button h4:hover{
+  color: #fed700;
+}
+
+.sns_page .content_1 .page_link button p {
   display: inline-block;
   color: #8d8d8d;
 }
 
-.sns_page .content_2{
+.sns_page .content_2 {
   width: 520px;
   height: 420px;
   text-align: left;
 }
 
-.sns_page .content_2 li{
+.sns_page .content_2 li {
   display: inline-block;
 }
 
-.sns_page .content_2 li .sns_box img{
+.sns_page .content_2 li .sns_box img {
   width: 160px;
   height: 160px;
   background-color: #000;
@@ -738,25 +938,54 @@ td {
   margin-bottom: 9px;
 }
 
-.sns_page .content_2 li .sns_icon_round{
+.sns_page .content_2 li .sns_icon_round {
   margin-top: 55px;
 }
 
-.sns_page .content_2 li .sns_icon_round li{
+.sns_page .content_2 li .sns_icon_round li {
   margin-right: 5px;
 }
 
-.sns_page .content_2 li .sns_icon_round img{
-  width: 50px;
-  height: 50px;
+.sns_page .content_2 li .sns_icon_round .sns_icon{
+  width: 40px;
+  height: 40px;
   background-color: #545454;
   border-radius: 5rem;
-  display: inline-block;
+}
+
+.sns_page .content_2 li .sns_icon_round .sns_icon:hover{
+  background-color: #303030;
+}
+
+.sns_page .content_2 li .sns_icon_round .round_1{
+  background-image: url(./img/sns_icon_1.png);
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: center;
+}
+
+.sns_page .content_2 li .sns_icon_round .round_2{
+  background-image: url(./img/sns_icon_2.png);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+}
+.sns_page .content_2 li .sns_icon_round .round_3{
+  background-image: url(./img/sns_icon_3.png);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+}
+.sns_page .content_2 li .sns_icon_round .round_4{
+  background-image: url(./img/sns_icon_4.png);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
 }
 
 /* 지진피해 기부 안내 */
 
-.donation{
+.donation {
   height: 500px;
   background-image: url(./img/donation_back.jpg);
   background-repeat: no-repeat;
@@ -766,27 +995,27 @@ td {
   text-align: center;
 }
 
-.donation .donation_icon{
+.donation .donation_icon {
   padding-top: 100px;
 }
 
-.donation h2{
+.donation h2 {
   margin-top: 35px;
   font-family: "SCDream9";
   font-size: 24px;
   color: white;
 }
 
-.donation .donation_but{
+.donation .donation_but {
   margin-top: 80px;
 }
 
-.donation .donation_but li{
+.donation .donation_but li {
   display: inline-block;
   padding: 20px;
 }
 
-.donation .donation_but div{
+.donation .donation_but div {
   width: 250px;
   height: 70px;
   background-color: #ebebeb;
@@ -794,9 +1023,15 @@ td {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
+  transition: 0.5s;
 }
 
-.donation .donation_but div img{
+.donation .donation_but div:hover{
+  transition: 0.5s;
+  transform: translateY(-5px);
+}
+
+.donation .donation_but div img {
   object-fit: none;
   width: 150px;
 }
@@ -852,30 +1087,122 @@ td {
 
 /* 푸터 */
 footer {
-  height: 500px;
+  height: 400px;
   background-color: #8e8e8e;
 }
 
-footer ul {
-  display: inline-block;
-  text-align: left;
-}
-
 footer .footer_nav {
-  text-align: center;
-  width: 100%;
+  margin: 0 auto;
+  width: 1280px;
+  height: 300px;
 }
 
 footer p {
   text-align: center;
 }
 
-footer .fo_4 li{
+footer .fo{
+  text-align: left;
+  float: left;
+  width: 25%;
+  padding-top: 60px;
+}
+
+footer .fo_1 .top{
+  margin-bottom: 115px;
+}
+
+footer .fo_1 .bottom{
+  width: 230px;
+}
+
+footer .fo_1 h2 {
+  font-size: 24px;
+  font-family: "SCDream9";
+  color: white;
+}
+
+footer .fo_1 h3 {
+  font-size: 14px;
+  font-family: "SCDream3";
+  color: #545454;
+}
+
+footer .fo_2 .bottom{
+  margin: 60px 0;
+}
+
+footer .fo_2 h5 {
+  font-size: 14px;
+  font-family: "SCDream3";
+  color: #fed700;
+}
+
+footer .fo_2 h4 {
+  font-size: 14px;
+  font-family: "SCDream3";
+  color: #545454;
+}
+
+footer .fo_3 .bottom{
+  margin: 33px 0;
+}
+
+footer .fo_3 h4 {
+  font-size: 14px;
+  font-family: "SCDream5";
+  color: white;
+}
+
+footer .fo_3 h4:hover{
+  color: #303030;
+}
+
+footer .fo_4 li {
   display: inline-block;
 }
 
-footer .fo_4 img{
- width: 50px;
- height: 50px;
- background-color: #000;
+footer .fo_4 li {
+  margin-right: 10px;
+  text-align: center;
+}
+
+footer .fo_4 .fo_icon {
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+}
+
+footer .fo_4 .fo_icon_1 {
+  background-image: url(./img/sns_icon_1.png);
+}
+
+footer .fo_4 .fo_icon_2 {
+  background-image: url(./img/sns_icon_2.png);
+}
+
+footer .fo_4 .fo_icon_3 {
+  background-image: url(./img/sns_icon_3.png);
+}
+
+footer .fo_4 .fo_icon_4 {
+  background-image: url(./img/sns_icon_4.png);
+}
+
+footer .fo_line{
+  clear: both;
+  margin: 0 auto;
+  background-color: #fed700;
+  height: 2px;
+  width: 1800px;
+}
+
+footer .fo_bo{
+  margin-top: 40px;
+  font-size: 14px;
+  font-family: "SCDream5";
+  color: #545454;
+  text-align: center;
 }

@@ -1,0 +1,28 @@
+.back-to-postition{
+    opacity: 0;
+    transition: 1s;
+}
+.back-to-postition.to-right{
+    transform: translateX(150px);
+}
+
+.back-to-postition.to-left{
+    transform: translateX(-150px);
+}
+
+.back-to-postition.to-up{
+    transform: translateY(50px);
+}
+
+.show .back-to-postition{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.show .back-to-postition.delay-0{
+    transition-delay: 0s;
+}
+
+.show .back-to-postition.delay-1{
+    transition-delay: .5s;
+}   

@@ -6,8 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="scroll.css">
+    <link rel="stylesheet" href="index_mobile.css">
     <title>지진예방사이트</title>
     <script src="./jquery-3.7.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -48,10 +52,10 @@
                 </a>
     
                 <ul class="sns_icon">
-                    <li><img src="" alt=""></li>
-                    <li><img src="" alt=""></li>
-                    <li><img src="" alt=""></li>
-                    <li><img src="" alt=""></li>
+                    <li class="sns_1"><img src="./img/sns_icon_4.png" alt=""></li>
+                    <li class="sns_2"><img src="./img/sns_icon_3.png" alt=""></li>
+                    <li class="sns_3"><img src="./img/sns_icon_2.png" alt=""></li>
+                    <li><img src="./img/sns_icon_1.png" alt=""></li>
                 </ul>
             </ul>
         </div>
@@ -83,7 +87,7 @@
     
 
     <!-- 타이틀 -->
-    <section class="title">
+    <section class="title" id="con_1">
 
         <img class="tit_img tit_img_1" src="./img/tit_img_1.png" alt="">
         <img class="tit_img tit_img_2" src="./img/tit_img_2.png" alt="">
@@ -92,79 +96,155 @@
 
         <div class="tit_but">
             <ul>
-                <li class="tit_but_r"><button>지진 전조증상 &#43;</button></li>
-                <li class="tit_but_l"><button>지진 발생 시 &#43;</button></li>
-                <li class="tit_but_r"><button>지진 대피 후 &#43;</button></li>
+                <li class="tit_but_r"><a href="./sub_1.html"><button id="sub_1">지진 전조증상 &#43;</button></a></li>
+                <li class="tit_but_l"><a href="./sub_2.html"><button id="sub_2">지진 발생 시 &#43;</button></a></li>
+                <li class="tit_but_r"><a href="./sub_3.html"><button>지진 대피 후 &#43;</button></a></li>
             </ul>
         </div>
 
         <div class="tit_intro">
             <div class="tit_icon"></div>
-            <h3>2023 방심할 수 없는 재난의 위협</h3>
-            <img class="intro" src="./img/intro.png" alt="">
-            <h2>예방 수칙 및 대피 방법에 대해 함께 배워요!</h2>
+            <h3 class="fade-in">2023 방심할 수 없는 재난의 위협</h3>
+            <img class="intro fade-in" src="./img/intro.png" alt="">
+            <h2 class="fade-in" id="tit_h2"></h2>
+
+            <script>
+
+var string = "예방 수칙 및 대피 방법에 대해 함께 배워요!"; /* type your text here */
+var array = string.split("");
+var timer;
+
+function frameLooper () {
+	if (array.length > 0) {
+		document.getElementById("tit_h2").innerHTML += array.shift();
+	} else {
+		clearTimeout(timer);
+			}
+	loopTimer = setTimeout('frameLooper()',70); /* change 70 for speed */
+}
+
+setTimeout(function() {
+    frameLooper();
+}, 2000);
+
+            </script>
         </div>
 
         <div class="tit_back">
-            <div class="tit_content">
-                <div class="tit_content_img"></div>
+            <div class="tit_content section scroll-spy">
+                <div class="tit_content_img back-to-postition to-up delay-0">
+                    <img class="tit_content_img_1" src="./img/tit_content_img_1.png" alt="">
+                    <div class="wave_main">
+                        <div id="wave" class="wave wave_1"></div>
+                        <div id="wave" class="wave wave_2"></div>
+                        <div id="wave" class="wave wave_3"></div>
+                    </div>
+                    <img class="tit_content_img_2" src="./img/tit_content_img_2.png" alt="">
+                    <img class="fire_1" src="./img/fire.png" alt="">
+                    <img class="fire_2" src="./img/fire.png" alt="">
+                    <img class="tit_content_img_3" src="./img/tit_content_img_3.png" alt="">
+                    <img class="desk" src="./img/desk.png" alt="">
+                </div>
+
                 <img class="tit_back_left" src="./img/tit_back_left.png" alt="">
                 <img class="tit_back_right" src="./img/tit_back_right.png" alt="">
             </div>
 
         </div>
+    
     </section>
 
     <!-- 지진 대피장소 -->
-    <section class="shelter">
-        <div class="shelter_tit">
-            <div class="shelter_icon"></div>
-            <h2>지진 <p>대피장소</p>
+    <section class="shelter" id="con_2">
+        <div class="shelter_tit section scroll-spy">
+            <div class="shelter_icon back-to-postition to-up delay-0"></div>
+            <h2 class="back-to-postition to-up delay-0">지진 <p>대피장소</p>
             </h2>
             <img class="shelter_img" src="./img/tit_img_5.png" alt="">
         </div>
 
         <iframe class="google"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25554.473924205984!2d127.09138827431636!3d36.81110900000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b2924299ec417%3A0x20b45ce44007ec2b!2z7KeA7KeE7Jil7Jm464yA7ZS87J6l7IaMKOyMjeyaqeqzteybkCk!5e0!3m2!1sko!2skr!4v1684911281567!5m2!1sko!2skr"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.522924945045!2d127.0786036!3d37.495582999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca433c0df962d%3A0xf7d96e2e575ae2b7!2z7ISc7Jq47Yq567OE7IucIOqwleuCqOq1rCDqsJztj6zroZwxMDnquLggNjI!5e0!3m2!1sko!2skr!4v1685421814783!5m2!1sko!2skr"
             width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         <div class="map">
             <!-- 셀렉트 박스 -->
-            <div class="selectBoxList">
+            <div class="selectBoxList" id="con_2">
                 <!-- selectBox1 -->
                 <div class="box">
-                    <div class="selectBox2 ">
+                    <div class="selectBox2">
                         <button class="label">시도전체</button>
                         <ul class="optionList">
-                            <li class="optionItem">apple</li>
-                            <li class="optionItem">orange</li>
-                            <li class="optionItem">grape</li>
-                            <li class="optionItem">melon</li>
+                            <li class="optionItem">서울특별시</li>
+                            <li class="optionItem">부산광역시</li>
+                            <li class="optionItem">대구광역시</li>
+                            <li class="optionItem">인천광역시</li>
+                            <li class="optionItem">광주광역시</li>
+                            <li class="optionItem">대전광역시</li>
+                            <li class="optionItem">울산광역시</li>
+                            <li class="optionItem">세종특별자치시</li>
+                            <li class="optionItem">경기도</li>
+                            <li class="optionItem">강원도</li>
+                            <li class="optionItem">충청북도</li>
+                            <li class="optionItem">충청남도</li>
+                            <li class="optionItem">전라남도</li>
+                            <li class="optionItem">경상북도</li>
+                            <li class="optionItem">경상남도</li>
+                            <li class="optionItem">제주특별자치도</li>
                         </ul>
                     </div>
                 </div>
                 <!-- selectBox2 -->
                 <div class="box">
-                    <div class="selectBox2  ">
+                    <div class="selectBox2">
                         <button class="label">시군구전체</button>
                         <ul class="optionList">
-                            <li class="optionItem">Red</li>
-                            <li class="optionItem">orange</li>
-                            <li class="optionItem">purple</li>
-                            <li class="optionItem">green</li>
+                            <li class="optionItem">강남구</li>
+                            <li class="optionItem">강동구</li>
+                            <li class="optionItem">강북구</li>
+                            <li class="optionItem">강서구</li>
+                            <li class="optionItem">관악구</li>
+                            <li class="optionItem">광진구</li>
+                            <li class="optionItem">구로구</li>
+                            <li class="optionItem">금천구</li>
+                            <li class="optionItem">노원구</li>
+                            <li class="optionItem">도봉구</li>
+                            <li class="optionItem">동대문구</li>
+                            <li class="optionItem">동작구</li>
+                            <li class="optionItem">마포구</li>
+                            <li class="optionItem">서대문구</li>
+                            <li class="optionItem">서초구</li>
+                            <li class="optionItem">송파구</li>
+                            <li class="optionItem">양천구</li>
+                            <li class="optionItem">영등포구</li>
+                            <li class="optionItem">용산구</li>
+                            <li class="optionItem">은평구</li>
+                            <li class="optionItem">종로구</li>
+                            <li class="optionItem">중구</li>
+                            <li class="optionItem">중랑구</li>
                         </ul>
                     </div>
                 </div>
                 <!-- selectBox3 -->
                 <div class="box">
-                    <div class="selectBox2  ">
+                    <div class="selectBox2">
                         <button class="label">읍면동전체</button>
                         <ul class="optionList">
-                            <li class="optionItem">pizza</li>
-                            <li class="optionItem">ramen</li>
-                            <li class="optionItem">kimchi</li>
-                            <li class="optionItem">somori gukbob</li>
+                            <li class="optionItem">개포동</li>
+                            <li class="optionItem">논현동</li>
+                            <li class="optionItem">대치동</li>
+                            <li class="optionItem">도곡동</li>
+                            <li class="optionItem">삼성동</li>
+                            <li class="optionItem">세곡동</li>
+                            <li class="optionItem">수서동</li>
+                            <li class="optionItem">신사동</li>
+                            <li class="optionItem">압구정동</li>
+                            <li class="optionItem">역삼동</li>
+                            <li class="optionItem">율현동</li>
+                            <li class="optionItem">일원동</li>
+                            <li class="optionItem">자곡동</li>
+                            <li class="optionItem">청담동</li>
                         </ul>
                     </div>
                 </div>
@@ -178,7 +258,7 @@
 
             <!-- 테이블 -->
             <div class="table">
-                <table id="products" border="1">
+                <table id="products">
                     <caption>
                         <form action="" id="setRows">
                             <p>
@@ -189,90 +269,76 @@
 
                     <thead>
                         <tr>
-                            <th>시설구분</th>
-                            <th>시설명</th>
-                            <th>상세주소</th>
-                            <th>수용가능면적</th>
-                            <th>연락처</th>
+                            <th class="t_1">시설구분</th>
+                            <th class="t_2">시설명</th>
+                            <th class="t_3">상세주소</th>
+                            <th class="t_4">수용가능면적</th>
+                            <th class="t_5">연락처</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>1</td>
-                            <td>Clothing</td>
-                            <td>Jacket</td>
-                            <td>Jacket</td>
-                            <td>Jacket</td>
+                            <td class="t_1">공원</td>
+                            <td class="t_2">대진근린공원</td>
+                            <td class="t_3">서울특별시 강남구 개포로109길 62 (개포동)</td>
+                            <td class="t_4">13568m²</td>
+                            <td class="t_5">02-3423-8453</td>
                         </tr>
                         <tr>
-                            <td>2</td>
-                            <td>life</td>
-                            <td>dish</td>
-                            <td>dish</td>
-                            <td>dish</td>
+                            <td class="t_1">공원</td>
+                            <td class="t_2">개포은행나무공원</td>
+                            <td class="t_3">서울특별시 강남구 개포로20길 48 (개포동)</td>
+                            <td class="t_4">1642m²</td>
+                            <td class="t_5">3423-7853</td>
                         </tr>
                         <tr>
-                            <td>3</td>
-                            <td>Clothing</td>
-                            <td>shocks</td>
-                            <td>shocks</td>
-                            <td>shocks</td>
+                            <td class="t_1">학교운동장</td>
+                            <td class="t_2">국립국악고등학교 운동장</td>
+                            <td class="t_3">서울특별시 강남구 개포로22길 65 (개포동)</td>
+                            <td class="t_4">1392m²</td>
+                            <td class="t_5">02-3423-7853</td>
                         </tr>
                         <tr>
-                            <td>3</td>
-                            <td>Clothing</td>
-                            <td>shocks</td>
-                            <td>shocks</td>
-                            <td>shocks</td>
+                            <td class="t_1">학교운동장</td>
+                            <td class="t_2">구룡초등학교 운동장</td>
+                            <td class="t_3">서울특별시 강남구 개포로 263 (개포동)</td>
+                            <td class="t_4">12874m²</td>
+                            <td class="t_5">3423-7853</td>
                         </tr>
                         <tr>
-                            <td>3</td>
-                            <td>Clothing</td>
-                            <td>shocks</td>
-                            <td>shocks</td>
-                            <td>shocks</td>
+                            <td class="t_1">공원</td>
+                            <td class="t_2">학여울근린공원(개포동근린공원)</td>
+                            <td class="t_3">서울특별시 강남구 개포로 509 (개포동)</td>
+                            <td class="t_4">12506m²</td>
+                            <td class="t_5">3423-7755</td>
                         </tr>
                         <tr>
-                            <td>3</td>
-                            <td>Clothing</td>
-                            <td>shocks</td>
-                            <td>shocks</td>
-                            <td>shocks</td>
+                            <td class="t_1">공원</td>
+                            <td class="t_2">개포서근린공원</td>
+                            <td class="t_3">서울특별시 강남구 개포로 409-1 (개포동)</td>
+                            <td class="t_4">11627m²</td>
+                            <td class="t_5">3423-7755</td>
                         </tr>
                         <tr>
-                            <td>3</td>
-                            <td>Clothing</td>
-                            <td>shocks</td>
-                            <td>shocks</td>
-                            <td>shocks</td>
+                            <td class="t_1">공원</td>
+                            <td class="t_2">개포동근린공원</td>
+                            <td class="t_3">서울특별시 강남구 개포로 509 (개포동)</td>
+                            <td class="t_4">9706m²</td>
+                            <td class="t_5">3423-7755</td>
                         </tr>
                         <tr>
-                            <td>3</td>
-                            <td>Clothing</td>
-                            <td>shocks</td>
-                            <td>shocks</td>
-                            <td>shocks</td>
+                            <td class="t_1">학교운동장</td>
+                            <td class="t_2">양전초등학교 운동장</td>
+                            <td class="t_3">서울특별시 강남구 개포로 513 (개포동)</td>
+                            <td class="t_4">7515m²</td>
+                            <td class="t_5">3423-7755</td>
                         </tr>
                         <tr>
-                            <td>3</td>
-                            <td>Clothing</td>
-                            <td>shocks</td>
-                            <td>shocks</td>
-                            <td>shocks</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Clothing</td>
-                            <td>shocks</td>
-                            <td>shocks</td>
-                            <td>shocks</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Clothing</td>
-                            <td>shocks</td>
-                            <td>shocks</td>
-                            <td>shocks</td>
+                            <td class="t_1">학교운동장</td>
+                            <td class="t_2">수도전기공업고등학교 운동장</td>
+                            <td class="t_3">서울특별시 강남구 개포로 410 (개포동)</td>
+                            <td class="t_4">20800m²</td>
+                            <td class="t_5">3423-7755</td>
                         </tr>
                     </tbody>
                 </table>
@@ -285,14 +351,14 @@
     </section>
 
     <!-- 지진 더 살펴보기 -->
-    <section class="sns_page">
-        <h2>지진 <p>더 살펴보기</p>
+    <section class="sns_page section scroll-spy" id="con_3">
+        <h2 class="back-to-postition to-up delay-0">지진 <p>더 살펴보기</p>
         </h2>
 
         <img class="sns_page_back sns_page_l" src="./img/sns_page_l.png" alt="">
         <img class="sns_page_back sns_page_r" src="./img/sns_page_r.png" alt="">
-        <img class="person_1" src="./img/person_1.png" alt="">
-        <img class="person_2" src="./img/person_2.png" alt="">
+        <div class="back-to-postition to-right delay-1"><img class="person_1" src="./img/person_1.png" alt=""></div>
+        <div class="back-to-postition to-left delay-1"><img class="person_2" src="./img/person_2.png" alt=""></div>
 
         <div class="sns">
             <ul class="content_1">
@@ -308,8 +374,9 @@
                         </li>
                         <li>
                             <button>
-                                <h4>국민재난안전포털 <p>바로가기 ▶</p>
-                                </h4>
+                                <a href="https://www.safekorea.go.kr/idsiSFK/neo/main/main.html">
+                                <h4>국민재난안전포털 <p>바로가기 ▶</p></h4>
+                            </a>
                             </button>
                         </li>
                         <li>
@@ -325,20 +392,20 @@
             <ul class="content_2">
                 <li>
                     <ul class="sns_box">
-                        <li><img src="" alt=""></li>
-                        <li><img src="" alt=""></li>
-                        <li><img src="" alt=""></li>
-                        <li><img src="" alt=""></li>
-                        <li><img src="" alt=""></li>
-                        <li><img src="" alt=""></li>
+                        <li><img src="./img/sns_box_1.png" alt=""></li>
+                        <li><img src="./img/sns_box_2.png" alt=""></li>
+                        <li><img src="./img/sns_box_3.png" alt=""></li>
+                        <li><img src="./img/sns_box_4.png" alt=""></li>
+                        <li><img src="./img/sns_box_5.png" alt=""></li>
+                        <li><img src="./img/sns_box_6.png" alt=""></li>
                     </ul>
                 </li>
                 <li>
                     <ul class="sns_icon_round">
-                        <li><img src="" alt=""></li>
-                        <li><img src="" alt=""></li>
-                        <li><img src="" alt=""></li>
-                        <li><img src="" alt=""></li>
+                        <li><div class="sns_icon round_1"></div></li>
+                        <li><div class="sns_icon round_2"></div></li>
+                        <li><div class="sns_icon round_3"></div></li>
+                        <li><div class="sns_icon round_4"></div></li>
                     </ul>
                 </li>
             </ul>
@@ -346,9 +413,9 @@
     </section>
 
     <!-- 지진피해 기부 안내 -->
-    <section class="donation">
+    <section class="donation section scroll-spy" id="con_4">
         <img class="donation_icon" src="./img/donation_icon.png" alt="">
-        <h2>“지진 피해 복구에 동참하고, 희망과 재건의 길을 열어주세요”</h2>
+        <h2 class="back-to-postition to-up delay-0">“지진 피해 복구에 동참하고, 희망과 재건의 길을 열어주세요”</h2>
         <ul class="donation_but">
             <li>
                 <div><img src="./img/donation_but_1.png" alt=""></div>
@@ -378,67 +445,71 @@
     <!-- 푸터 -->
     <footer id="footer">
         <div class="footer_nav">
-            <ul class="fo_1">
-                <li>
+            <ul class="fo fo_1">
+                <li class="top">
                     <h2>지진 예방 사이트</h2>
                 </li>
-                <li>
-                    <h3>PC, 모바일에 사이즈에
-                        최적화 되어 있습니다
+                <li class="bottom">
+                    <h3>PC, 모바일에 사이즈에 최적화 되어 있습니다
                     </h3>
                 </li>
             </ul>
-            <ul class="fo_2">
-                <li>
-                    <h4>제작자 이지수, 조예영</h4>
+            <ul class="fo fo_2">
+                <li class="top">
+                    <h5>제작자 이지수, 조예영</h5>
                 </li>
-                <li>
+                <li class="bottom">
                     <h4>참고 사이트 기상청, 국민안전처</h4>
                 </li>
-                <li>
+                <li >
                     <h4>사용폰트 에스코어 드림</h4>
                 </li>
             </ul>
-            <ul class="fo_3">
-                <a href="#con_4">
-                    <li>
+            <ul class="fo fo_3">
+                <a href="#con_1">
+                    <li class="top">
                         <h4>지진 행동요령</h4>
                     </li>
                 </a>
-                <a href="#con_5">
-                    <li>
+                <a href="#con_2">
+                    <li class="bottom">
                         <h4>지진 대피장소</h4>
                     </li>
                 </a>
-                <a href="#con_6">
-                    <li>
+                <a href="#con_3">
+                    <li class="bottom">
                         <h4>지진 더 살펴보기</h4>
                     </li>
                 </a>
-                <a href="#con_7">
-                    <li>
+                <a href="#con_4">
+                    <li >
                         <h4>지진피해 기부안내</h4>
                     </li>
                 </a>
             </ul>
-            <ul class="fo_4">
+            <ul class="fo fo_4">
                 <li>
-                    <img src="" alt="">
+                    <a href="#"><div class="fo_icon fo_icon_1"></div></a>
                 </li>
                 <li>
-                    <img src="" alt="">
+                    <a href="#"><div class="fo_icon fo_icon_2"></div></a>
                 </li>
                 <li>
-                    <img src="" alt="">
+                    <a href="#"><div class="fo_icon fo_icon_3"></div></a>
                 </li>
                 <li>
-                    <img src="" alt="">
+                    <a href="#"><div class="fo_icon fo_icon_4"></div></a>
                 </li>
             </ul>
         </div>
-        <hr>
-        <p>본 사이트는 상업적 용도가 아닌 공모전 전용 사이트 입니다.</p>
+        
+        <div class="fo_line"></div>
+        <p class="fo_bo">본 사이트는 상업적 용도가 아닌 공모전 전용 사이트 입니다.</p>
     </footer>
+
+    <script src="scroll.js"></script>
+    <script src="gsap.js"></script>
+
 </body>
 
 </html>

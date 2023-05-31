@@ -1,0 +1,213 @@
+@media ( max-width: 768px ) {
+
+/* 네비게이션 */
+
+nav {
+    position: relative;
+    height: 5px;
+    width: 100%;
+    z-index: 999;
+  }
+
+  .container {
+    position: fixed;
+    height: 50px;
+    width: 768px;
+    background-color: black;
+    transition: .3s;
+  }
+
+nav .nav {
+    width: 768px;
+  }
+
+  nav .nav li {
+    font-size: 8px;
+  }
+  
+  nav .sns_icon li {
+    float: right;
+    width: 0 auto;
+    width: 5px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav .sns_icon li {
+    float: right;
+    width: 0 auto;
+    width: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav .sns_icon .sns_1{
+    padding-left: 0px;
+  }
+  
+  nav .sns_icon .sns_2{
+    padding-left: 0px;
+  }
+  
+  nav .sns_icon .sns_3{
+    padding-left: 0px;
+  }
+
+  .sns_1,.sns_2,.sns_3,.sns_4{
+    padding: 0 30px;
+  }
+
+  nav .sns_icon li {
+    float: left;
+    margin: 0 auto;
+    width: 0;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav .sns_icon li img {
+    object-fit: cover;
+    opacity: 0.5;
+    }
+
+  nav .nav_line {
+    border: 1px solid #505050;
+    width: 0;
+    height: 25px;
+    margin: 12px 10px;
+  }
+  
+
+/* 메뉴바 상자 */
+
+position: absolute;
+width: 390px;
+height: 20px;
+left: 0px;
+top: 0px;
+
+background: #000000;
+
+
+/* 메뉴바 1 */
+
+position: absolute;
+width: 13px;
+height: 0px;
+left: 70px;
+top: 3px;
+
+border: 1px solid #B0B0B0;
+transform: rotate(90deg);
+
+
+/* 메뉴바 2 */
+
+position: absolute;
+width: 13px;
+height: 0px;
+left: 140px;
+top: 3px;
+
+border: 1px solid #B0B0B0;
+transform: rotate(90deg);
+
+
+/* 메뉴바 3 */
+
+position: absolute;
+width: 13px;
+height: 0px;
+left: 210px;
+top: 3px;
+
+border: 1px solid #B0B0B0;
+transform: rotate(90deg);
+
+
+/* 지진 행동요령 */
+
+position: absolute;
+width: 62px;
+height: 12px;
+left: 4px;
+top: 4px;
+
+font-family: 'S-Core Dream';
+font-style: normal;
+font-weight: 600;
+font-size: 8px;
+line-height: 10px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* 지진 대피장소 */
+
+position: absolute;
+width: 62px;
+height: 12px;
+left: 75px;
+top: 4px;
+
+font-family: 'S-Core Dream';
+font-style: normal;
+font-weight: 600;
+font-size: 8px;
+line-height: 10px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* 지진 더 살펴보기 */
+
+position: absolute;
+width: 62px;
+height: 12px;
+left: 144px;
+top: 4px;
+
+font-family: 'S-Core Dream';
+font-style: normal;
+font-weight: 600;
+font-size: 8px;
+line-height: 10px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #FFFFFF;
+
+
+
+/* 지진피해 기부 안내 */
+
+position: absolute;
+width: 69px;
+height: 12px;
+left: 214px;
+top: 4px;
+
+font-family: 'S-Core Dream';
+font-style: normal;
+font-weight: 600;
+font-size: 8px;
+line-height: 10px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+
+  }
