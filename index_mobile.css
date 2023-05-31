@@ -17,7 +17,7 @@
     nav {
         position: relative;
         height: 8px;
-        width: 100%;
+        width: 768px;
         z-index: 999;
     }
 
@@ -266,8 +266,11 @@
 .sns_page {
     position: relative;
     background-color: #8d8d8d;
-    text-align: center;
-    height: 500px;
+    height: 800px;
+  }
+
+  .sns_page .sns {
+    flex-flow: row wrap;
   }
 
   .sns_page .sns_page_l {
@@ -286,98 +289,128 @@
     opacity: 0;
   }
 
-    /* 메뉴바 3 */
+  .sns_page h2 {
+    padding-top: 10px;
+    font-size: 20px;
+  }
 
-    position: absolute;
-    width: 13px;
-    height: 0px;
-    left: 210px;
-    top: 3px;
+.sns_page .content_1,
+.sns_page .content_2 {
+    float: none;
+  width: 768px;    
+}
 
-    border: 1px solid #B0B0B0;
-    transform: rotate(90deg);
-
-
-    /* 지진 행동요령 */
-
-    position: absolute;
-    width: 62px;
-    height: 12px;
-    left: 4px;
-    top: 4px;
-
-    font-family: 'S-Core Dream';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 8px;
-    line-height: 10px;
-    display: flex;
-    align-items: center;
+  .youtube{
+    width: 100%;
+    height: 100%;
     text-align: center;
+} 
 
-    color: #FFFFFF;
+.sns_page .content_1 {
+    width: 768px;
+  }
 
+  .sns_page .content_1 li {
+    float: none;
+  }
+  
+  .sns_page .content_1 .page_link {
+    margin: 0 auto;
+  }
 
+  .sns_page .content_1 .page_link h3 {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
 
-    /* 지진 대피장소 */
+  
+  .sns_page .content_1 .page_link_but{
+    width: 50%;
+    float: left;
+  }
 
-    position: absolute;
-    width: 62px;
-    height: 12px;
-    left: 75px;
-    top: 4px;
+  .sns_page .content_1 .page_link button {
+    padding: 10px;
+  }
+  
+  .sns_page .content_1 .page_link button h4 {
+    font-size: 12px;
+    font-family: "SCDream7";
+    color: white;
+  }
 
-    font-family: 'S-Core Dream';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 8px;
-    line-height: 10px;
-    display: flex;
-    align-items: center;
+  .sns_page .content_1 .page_link button p {
+    display: inline-block;
+    color: #8d8d8d;
+  }
+
+  .sns_page .content_2 {
+    width: 100%;
     text-align: center;
+  }
 
-    color: #FFFFFF;
+  .sns_page .content_2 li .sns_box img {
+    width: 80px;
+    height: 80px;
+    margin-right: 9px;
+  }
+
+  /* 지진피해 기부 안내 */
+
+.donation {
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.donation .donation_icon {
+  width: 50px;
+  padding-top: 50px;
+}
+
+.donation h2 {
+  margin-top: 10px;
+  font-size: 10px;
+}
+
+.donation .donation_but {
+  margin-top: 50px;
+}
+
+.donation .donation_but li{
+  padding: 5px;
+}
+
+.donation .donation_but div {
+  width: 150px;
+  height: 40px;
+}
+
+.donation .donation_but div img {
+  object-fit: contain;
+  width: 60%;
+}
 
 
+/* 흐르는 텍스트 */
+.flow-container {
+  border: #000 solid 3px;
+  border-left-style: solid;
+  border-bottom-style: solid;
+  border-left-style: none;
+  border-right-style: none;
+}
 
-    /* 지진 더 살펴보기 */
+.flow-text {
+  font-size: 12px;
+}
 
-    position: absolute;
-    width: 62px;
-    height: 12px;
-    left: 144px;
-    top: 4px;
-
-    font-family: 'S-Core Dream';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 8px;
-    line-height: 10px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #FFFFFF;
-
-
-
-    /* 지진피해 기부 안내 */
-
-    position: absolute;
-    width: 69px;
-    height: 12px;
-    left: 214px;
-    top: 4px;
-
-    font-family: 'S-Core Dream';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 8px;
-    line-height: 10px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #FFFFFF;
+/* 푸터 */
+footer .footer_nav {
+  margin: 0 auto;
+  width: 100%;
+  height: 300px;
+}
 
 
 }
