@@ -10,8 +10,12 @@
     <link rel="stylesheet" href="index_mobile.css">
     <title>지진예방사이트</title>
     <script src="./jquery-3.7.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+        integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+        integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -50,7 +54,7 @@
                 <a href="#con_4">
                     <li>지진피해 기부 안내</li>
                 </a>
-    
+
                 <ul class="sns_icon">
                     <li class="sns_1"><img src="./img/sns_icon_4.png" alt=""></li>
                     <li class="sns_2"><img src="./img/sns_icon_3.png" alt=""></li>
@@ -59,32 +63,32 @@
                 </ul>
             </ul>
         </div>
-       
+
     </nav>
 
     <script src="nav.js"></script>
 
-            <!-- 토글메뉴 -->
+    <!-- 토글메뉴 -->
 
-            <div class="side-nav">
-                <div class="side-toggle">
-                  <h2>실시간 지진현황</h2>
-                </div>
-                
-                <div class="inner-nav">
-                    <div class="live"><img src="./img/toggle_img.jpg" alt="">
-                        <h3>진도 3.4 규모 지진</h3>
-                        <h4>미국 캘리포니아 퍼시비카(으)로부터 2km </h4>
-                        <p>3월 28일 오후 10:01</p>
-                    </div>
-                </div>
-              </div>
-              
-              <div class="main-content">        
-              </div>
-        
-            <script src="toggle_menu.js"></script>
-    
+    <div class="side-nav">
+        <div class="side-toggle">
+            <h2>실시간 지진현황</h2>
+        </div>
+
+        <div class="inner-nav">
+            <div class="live"><img src="./img/toggle_img.jpg" alt="">
+                <h3>진도 3.4 규모 지진</h3>
+                <h4>미국 캘리포니아 퍼시비카(으)로부터 2km </h4>
+                <p>3월 28일 오후 10:01</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+    </div>
+
+    <script src="toggle_menu.js"></script>
+
 
     <!-- 타이틀 -->
     <section class="title" id="con_1">
@@ -107,28 +111,27 @@
             <h3 class="fade-in">2023 방심할 수 없는 재난의 위협</h3>
             <img class="intro fade-in" src="./img/intro.png" alt="">
             <h2 class="fade-in" id="tit_h2"></h2>
-
-            <script>
-
-var string = "예방 수칙 및 대피 방법에 대해 함께 배워요!"; /* type your text here */
-var array = string.split("");
-var timer;
-
-function frameLooper () {
-	if (array.length > 0) {
-		document.getElementById("tit_h2").innerHTML += array.shift();
-	} else {
-		clearTimeout(timer);
-			}
-	loopTimer = setTimeout('frameLooper()',70); /* change 70 for speed */
-}
-
-setTimeout(function() {
-    frameLooper();
-}, 2000);
-
-            </script>
         </div>
+        <script>
+
+            var string = "예방 수칙 및 대피 방법에 대해 함께 배워요!"; /* type your text here */
+            var array = string.split("");
+            var timer;
+
+            function frameLooper() {
+                if (array.length > 0) {
+                    document.getElementById("tit_h2").innerHTML += array.shift();
+                } else {
+                    clearTimeout(timer);
+                }
+                loopTimer = setTimeout('frameLooper()', 70); /* change 70 for speed */
+            }
+
+            setTimeout(function () {
+                frameLooper();
+            }, 2000);
+
+        </script>
 
         <div class="tit_back">
             <div class="tit_content section scroll-spy">
@@ -151,7 +154,7 @@ setTimeout(function() {
             </div>
 
         </div>
-    
+
     </section>
 
     <!-- 지진 대피장소 -->
@@ -375,8 +378,9 @@ setTimeout(function() {
                         <li>
                             <button>
                                 <a href="https://www.safekorea.go.kr/idsiSFK/neo/main/main.html">
-                                <h4>국민재난안전포털 <p>바로가기 ▶</p></h4>
-                            </a>
+                                    <h4>국민재난안전포털 <p>바로가기 ▶</p>
+                                    </h4>
+                                </a>
                             </button>
                         </li>
                         <li>
@@ -402,10 +406,18 @@ setTimeout(function() {
                 </li>
                 <li>
                     <ul class="sns_icon_round">
-                        <li><div class="sns_icon round_1"></div></li>
-                        <li><div class="sns_icon round_2"></div></li>
-                        <li><div class="sns_icon round_3"></div></li>
-                        <li><div class="sns_icon round_4"></div></li>
+                        <li>
+                            <div class="sns_icon round_1"></div>
+                        </li>
+                        <li>
+                            <div class="sns_icon round_2"></div>
+                        </li>
+                        <li>
+                            <div class="sns_icon round_3"></div>
+                        </li>
+                        <li>
+                            <div class="sns_icon round_4"></div>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -461,7 +473,7 @@ setTimeout(function() {
                 <li class="bottom">
                     <h4>참고 사이트 기상청, 국민안전처</h4>
                 </li>
-                <li >
+                <li>
                     <h4>사용폰트 에스코어 드림</h4>
                 </li>
             </ul>
@@ -482,27 +494,35 @@ setTimeout(function() {
                     </li>
                 </a>
                 <a href="#con_4">
-                    <li >
+                    <li>
                         <h4>지진피해 기부안내</h4>
                     </li>
                 </a>
             </ul>
             <ul class="fo fo_4">
                 <li>
-                    <a href="#"><div class="fo_icon fo_icon_1"></div></a>
+                    <a href="#">
+                        <div class="fo_icon fo_icon_1"></div>
+                    </a>
                 </li>
                 <li>
-                    <a href="#"><div class="fo_icon fo_icon_2"></div></a>
+                    <a href="#">
+                        <div class="fo_icon fo_icon_2"></div>
+                    </a>
                 </li>
                 <li>
-                    <a href="#"><div class="fo_icon fo_icon_3"></div></a>
+                    <a href="#">
+                        <div class="fo_icon fo_icon_3"></div>
+                    </a>
                 </li>
                 <li>
-                    <a href="#"><div class="fo_icon fo_icon_4"></div></a>
+                    <a href="#">
+                        <div class="fo_icon fo_icon_4"></div>
+                    </a>
                 </li>
             </ul>
         </div>
-        
+
         <div class="fo_line"></div>
         <p class="fo_bo">본 사이트는 상업적 용도가 아닌 공모전 전용 사이트 입니다.</p>
     </footer>

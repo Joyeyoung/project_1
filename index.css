@@ -40,7 +40,7 @@ a {
 }
 
 body {
-  max-width: 100%;
+  width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-user-select:none;
@@ -61,7 +61,7 @@ ul {
 
 .side-nav {
   display: inline-block;
-  max-width: 0px;
+  width: 0px;
   height: 0px;
   left: 0;
   background-color: #545454;
@@ -104,7 +104,7 @@ ul {
 
 .show-nav.side-nav {
   transition: all 1s ease;
-  max-width: 200px;
+  width: 200px;
 }
 
 .main-content {
@@ -113,7 +113,7 @@ ul {
 }
 
 .live {
-  max-width: 200px;
+  width: 200px;
   background-color: #ebebeb;
   margin: 0 auto;
 }
@@ -172,7 +172,7 @@ nav .nav {
 }
 
 nav .nav li {
-  margin: 0 auto;
+  width: 0 auto;
   float: left;
   color: white;
   font-family: "SCDream5";
@@ -197,7 +197,7 @@ nav .sns_icon .sns_3{
 
 nav .sns_icon li {
   float: right;
-  margin: 0 auto;
+  width: 0 auto;
   width: 10px;
   height: 50px;
   display: flex;
@@ -680,7 +680,8 @@ button {
 
 .selectBox2.active .optionList {
   max-height: 300px;
-  overflow-y: scroll; height:300px;
+  overflow-y: scroll;
+  height:300px;
 }
 
 .selectBox2 .optionItem {
