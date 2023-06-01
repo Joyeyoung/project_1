@@ -1,42 +1,50 @@
 @media (max-width: 768px) {
-
+  
+  body {
+  height: 100%;
+  }
+  
 
     /* 토글메뉴 */
     .side-nav h2 {
-        font-size: 9px;
+        font-size: 10px;
         padding: 20px;
-        letter-spacing: -3px;
-        word-spacing: 4px;
+        letter-spacing: -2px;
+        word-spacing: 7px;
     }
 
     .side-nav>.side-toggle {
-        right: -54px;
+        right: -53px;
     }
 
     /* 네비게이션 */
     nav {
         position: relative;
-        height: 8px;
-        width: 768px;
         z-index: 999;
     }
 
     .container {
-        position: fixed;
-        height: 50px;
-        width: 768px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
         background-color: black;
         transition: .3s;
     }
 
     nav .nav {
-        width: 768px;
-        margin-left: 20px;
+      text-align: center;
+        width: 100%;
     }
 
     nav .nav li {
+      flex-direction: column;
         font-size: 10px;
         float: left;
+        padding: 0 10px;
+
     }
 
     nav .sns_icon li {
@@ -45,9 +53,9 @@
 
     nav .nav_line {
         border: 1px solid #505050;
-        width: 0;
         height: 25px;
-        margin: 12px 10px;
+        margin: 10px 0;
+        
     }
 
 
@@ -266,7 +274,7 @@
 .sns_page {
     position: relative;
     background-color: #8d8d8d;
-    height: 800px;
+    height: 700px;
   }
 
   .sns_page .sns {
@@ -290,17 +298,19 @@
   }
 
   .sns_page h2 {
-    padding-top: 10px;
+    padding-top: 20px;
     font-size: 20px;
   }
 
 .sns_page .content_1,
 .sns_page .content_2 {
     float: none;
-  width: 768px;    
+    margin-top: 20px;
+    width: 768px;    
 }
 
   .youtube{
+    margin: 0;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -358,8 +368,9 @@
   /* 지진피해 기부 안내 */
 
 .donation {
+  position: relative;
   width: 100%;
-  height: 300px;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -369,16 +380,18 @@
 }
 
 .donation h2 {
-  margin-top: 10px;
-  font-size: 10px;
+  position: absolute;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
 }
 
 .donation .donation_but {
-  margin-top: 50px;
+  padding: 10% 0;
 }
 
 .donation .donation_but li{
-  padding: 5px;
+  padding: 10px;
 }
 
 .donation .donation_but div {
@@ -406,11 +419,87 @@
 }
 
 /* 푸터 */
-footer .footer_nav {
-  margin: 0 auto;
-  width: 100%;
-  height: 300px;
+footer {
+  height: 100%;
 }
 
+
+footer .footer_nav {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
+
+footer .fo{
+  float: left;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 20px;
+}
+
+footer .fo_1 .top{
+  width: 100%;
+  margin: 0 10px;
+}
+
+footer .fo_1 .bottom{
+  width: 100%;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+footer .fo_1 h2 {
+  font-size: 12px;
+}
+
+footer .fo_1 h3 {
+  font-size: 6px;
+}
+
+footer .fo_2 .bottom{
+  margin: 0 auto;
+}
+
+footer .fo_2 h5 {
+  padding: 0 10px;
+  font-size: 6px;
+}
+
+footer .fo_2 h4 {
+  padding: 0 10px;
+  font-size: 8px;
+}
+
+footer .fo_3 .bottom{
+  margin: 0 auto;
+}
+
+footer .fo_3 h4 {
+  width: 100%;
+  padding: 0 12px;
+  font-size: 10px;
+}
+
+footer .fo_4 li{
+  margin-bottom: 20px;
+}
+
+footer .fo_4 .fo_icon {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+}
+
+footer .fo_line{
+  margin: 0 auto;
+  width: 100%;
+}
+
+footer .fo_bo{
+  margin-top: 20px;
+  font-size: 8px;
+  padding-bottom: 20px;
+}
 
 }

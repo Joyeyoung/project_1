@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="sub_3.css">
     <title>지진 발생 시</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+    integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -40,7 +43,7 @@
                 <p>지진 대피 후</p> 상황
             </h1>
             <ul class="main">
-                <ul class="main_left">
+                <ul class="main_left fade-in2">
                     <li>
                         <div class="main_tex">
                             <h3>1</h3>
@@ -59,7 +62,7 @@
                     </li>
                 </ul>
     
-                <ul class="main_right">
+                <ul class="main_right fade-in2">
                     <li>
                         <img src="./img/sub_3_con_2.png" alt="">
                         <div class="main_tex">
@@ -77,9 +80,10 @@
                         </div>
                     </li>
                 </ul>
-            </ul>
-           
+            </ul>           
         </div>
+
+        <script src="gsap.js"></script>
 
     </section>
 </body>
