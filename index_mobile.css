@@ -4,7 +4,7 @@
     .side-nav h2 {
         font-size: 10px;
         padding: 20px;
-        letter-spacing: -2.5px;
+        letter-spacing: -2px;
         word-spacing: 7px;
     }
 
@@ -64,7 +64,7 @@
     }
 
     nav .nav li {
-      font-size: 2vmin;
+      font-size: 1vmax;
       float: none;
       display: inline-block;
     }
@@ -155,8 +155,8 @@
 
     .title .tit_intro h2 {
         font-size: 15px;
-        padding: 5px;
-        height: 23px;
+        padding: 10;
+        height: 25px;
         text-align: center;
         margin-top: 10px;
     }
@@ -492,7 +492,7 @@ footer .fo_1 h2 {
 
 footer .fo_1 h3 {
   text-align: right;
-  font-size: 5px;
+  font-size: 1vmax;
   padding: 0 15px;
 }
 
@@ -506,12 +506,12 @@ footer .fo_2 .bottom{
 
 footer .fo_2 h5 {
   padding: 0 15px;
-  font-size: 5px;
+  font-size: 1vmax;
 }
 
 footer .fo_2 h4 {
   padding: 0 15px;
-  font-size: 5px;
+  font-size: 1vmax;
 }
 
 footer .fo_3{
