@@ -45,6 +45,7 @@ body {
 }
 
 body {
+    overflow: unset;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
