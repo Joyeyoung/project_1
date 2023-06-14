@@ -8,13 +8,14 @@
     /* 토글메뉴 */
     .side-nav h2 {
         font-size: 10px;
-        padding: 20px;
+        padding: 15px;
         letter-spacing: -2px;
         word-spacing: 7px;
     }
 
     .side-nav>.side-toggle {
-        right: -53px;
+        transform: translateX(-19px);
+        left: 0 auto;
     }
 
     /* 네비게이션 */
@@ -35,16 +36,14 @@
     }
 
     nav .nav {
-      text-align: center;
+        text-align: center;
         width: 100%;
     }
 
     nav .nav li {
-      flex-direction: column;
-        font-size: 10px;
-        float: left;
-        padding: 0 10px;
-
+      font-size: 10px;
+      float: none;
+      display: inline-block;
     }
 
     nav .sns_icon li {
@@ -53,9 +52,10 @@
 
     nav .nav_line {
         border: 1px solid #505050;
-        height: 25px;
-        margin: 10px 0;
-        
+        width: 0;
+        height: 15px;
+        margin: 0 auto;
+        transform: translateY(5px);
     }
 
 
@@ -73,37 +73,42 @@
     }
 
     .tit_back .tit_content {
-        background-color: #fed700;
+      z-index: 1;
+      height: 300px;
     }
 
-    .tit_back_left {
-        opacity: 0;
+    .tit_back .tit_back_left {
+      opacity: 0;
     }
-
-    .tit_back_right {
-        opacity: 0;
+    
+    .tit_back .tit_back_right {
+      width: 250px;
+      bottom: -83px;
+      right: 0;
     }
-
     .title .tit_intro {
         width: 300px;
-        padding-top: 80px;
+        padding-top: 30px;
         margin: 0 auto;
     }
 
     .title .tit_img_1 {
-    opacity: 0;
+      opacity: 0;
       }
       
       .title .tit_img_2 {
-        opacity: 0;
+        right: 0px;
+        left: 30px;
       }
       
       .title .tit_img_3 {
-        opacity: 0;
+        width: 50px;
+        left: 10px;
       }
       
       .title .tit_img_4 {
-        opacity: 0;
+        width: 50px;
+        right: 10px;
       }
     .title .intro {
         width: 30vmax;
@@ -174,7 +179,7 @@
 
     /* 지진 대피장소 */
     .shelter {
-        height: 800px;
+        height: 100%;
         background-image: none;
         background-repeat: no-repeat;
         background-size: auto;
@@ -223,26 +228,35 @@
     }
 
     .selectBoxList .box {
-        text-align: center;
-        width: 500px;
+        width: 25%;
         top: 25px;
         left: 0px;
     }
 
     .selectBox2 {
-        width: 100px;
-        height: 30px;
+        width: 100%;
     }
 
     .selectBox2 .label {
-        font-size: 10px;
+      padding-left: 5%;
+      font-size: 10px;
     }
 
+    .selectBox2:before {
+      content: '\25BC';
+      position: absolute;
+      top: 14px;
+      right: 5px;
+      font-size: 10px;
+      z-index: -1;
+    }
+    
     .selectBox2 .optionList {
         font-size: 10px;
     }
 
     #searchBtn {
+        width: 100%;
         font-size: 12px;
     }
 
@@ -272,9 +286,8 @@
   
 /* 지진 더 살펴보기 */
 .sns_page {
-    position: relative;
     background-color: #8d8d8d;
-    height: 700px;
+    height: 800px;
   }
 
   .sns_page .sns {
@@ -298,14 +311,14 @@
   }
 
   .sns_page h2 {
-    padding-top: 20px;
+    padding-top: 50px;
     font-size: 20px;
   }
 
 .sns_page .content_1,
 .sns_page .content_2 {
     float: none;
-    margin-top: 20px;
+    margin-top: 40px;
     width: 768px;    
 }
 
@@ -330,6 +343,7 @@
 
   .sns_page .content_1 .page_link h3 {
     font-size: 10px;
+    margin-top: 30px;
     margin-bottom: 10px;
   }
 
@@ -375,23 +389,24 @@
 }
 
 .donation .donation_icon {
-  width: 50px;
+  width: 15%;
   padding-top: 50px;
 }
 
 .donation h2 {
+  margin-top: 20px;
   position: absolute;
-  text-align: center;
-  padding: 10px;
-  font-size: 18px;
+  padding: 0 5%;
+  font-size: 15px;
 }
 
 .donation .donation_but {
-  padding: 10% 0;
+  padding: 0;
+  padding-bottom: 30px;
 }
 
 .donation .donation_but li{
-  padding: 10px;
+  padding: 3%;
 }
 
 .donation .donation_but div {
