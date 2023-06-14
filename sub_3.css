@@ -195,6 +195,7 @@ a.home_but div img:hover {
 
 .main_right{
     float: right;
+    margin-top: 0;
 }
 
 .main_left,.main_right{
