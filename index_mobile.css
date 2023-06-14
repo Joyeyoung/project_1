@@ -15,7 +15,7 @@
 
     .side-nav>.side-toggle {
         left: 0 auto;
-        right: -44px;
+        right: 0 auto;
     }
 
     /* 네비게이션 */
@@ -143,7 +143,7 @@
     }
 
     .title .tit_but {
-        top: 80%;
+        top: 400px;
         left: 50%;
     }
 
