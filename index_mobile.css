@@ -3,13 +3,42 @@
     /* 토글메뉴 */
     .side-nav h2 {
         font-size: 10px;
-        padding: 15px;
-        letter-spacing: -2px;
+        padding: 20px;
+        letter-spacing: -2.5px;
         word-spacing: 7px;
     }
 
     .side-nav>.side-toggle {
-        right: -44px;
+        right: -54px;
+    }
+
+    .show-nav.side-nav {
+      width: 180px;
+    }
+
+    .live {
+      width: 180px;
+    }
+    
+    .live img {
+      width: 180px;
+    }
+
+    .live h3 {
+      padding: 5px 10px;
+      font-size: 15px;
+    }
+    
+    .live h4 {
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+    
+    .live p {
+      padding: 0 10px;
+      padding-top: 5px;
+      padding-bottom: 10px;
+      font-size: 12px;
     }
 
     /* 네비게이션 */
@@ -35,13 +64,13 @@
     }
 
     nav .nav li {
-      font-size: 10px;
+      font-size: 2vmin;
       float: none;
       display: inline-block;
     }
 
     nav .sns_icon li {
-        opacity: 0;
+        display: none;
     }
 
     nav .nav_line {
@@ -55,7 +84,12 @@
 
     /* 업 버튼 */
     .arrow-up span {
-        font-size: 12px;
+        font-size: 20px;
+    }
+
+    .arrow-up {
+      bottom: 30px;
+      right: 30px;
     }
 
     /* 타이틀 */
@@ -72,7 +106,7 @@
     }
 
     .tit_back .tit_back_left {
-      opacity: 0;
+      display: none;
     }
     
     .tit_back .tit_back_right {
@@ -82,12 +116,12 @@
     }
     .title .tit_intro {
         width: 300px;
-        padding-top: 30px;
+        padding-top: 50px;
         margin: 0 auto;
     }
 
     .title .tit_img_1 {
-      opacity: 0;
+      display: none;
       }
       
       .title .tit_img_2 {
@@ -97,12 +131,12 @@
       
       .title .tit_img_3 {
         width: 50px;
-        left: 10px;
+        left: 5vmax;
       }
       
       .title .tit_img_4 {
         width: 50px;
-        right: 10px;
+        right: 5vmax;
       }
     .title .intro {
         width: 30vmax;
@@ -121,23 +155,18 @@
 
     .title .tit_intro h2 {
         font-size: 15px;
-        font-family: "SCDream7";
-        font-weight: bold;
-        color: #fed700;
         padding: 5px;
-        height: 20px;
-        background-color: black;
+        height: 23px;
         text-align: center;
         margin-top: 10px;
-        transform: translateX(-5px);
     }
 
     .tit_back .tit_content_img {
-        opacity: 0;
+      display: none;
     }
 
     .title .tit_but {
-        top: 400px;
+        top: 430px;
         left: 50%;
     }
 
@@ -161,13 +190,9 @@
     }
 
     .title .tit_but ul li button {
-        font-size: 2vmax;
-        font-family: "SCDream7";
-        text-align: center;
+        font-size: 1.5vmax;
         width: 30%;
-        padding: 5px;
-        background-color: black;
-        color: white;
+        padding: 10px;
         border: 1px solid white;
     }
 
@@ -181,17 +206,17 @@
     }
 
     .shelter .shelter_tit {
-        padding-top: 30px;
+        padding-top: 50px;
     }
 
     .shelter .shelter_img {
-        opacity: 0;
+      display: none;
     }
 
     .shelter .shelter_icon {
         margin: 0 auto;
-        width: 46px;
-        height: 40px;
+        width: 36px;
+        height: 30px;
         background-image: url(./img/tit_icon.png);
         background-repeat: no-repeat;
         background-size: 80%;
@@ -200,14 +225,15 @@
 
     .shelter h2 {
         margin-top: 5px;
-        font-size: 20px;
+        font-size: 15px;
         font-family: "SCDream9";
+        font-weight: normal;
         color: white;
     }
 
     .google {
         height: 300px;
-        margin-top: 30px;
+        margin-top: 50px;
         margin-bottom: 30px;
     }
 
@@ -289,24 +315,25 @@
   }
 
   .sns_page .sns_page_l {
-    opacity: 0;
+    display: none;
   }
   
   .sns_page .sns_page_r {
-    opacity: 0;
+    display: none;
   }
 
   .sns_page img.person_1 {
-   opacity: 0;
+    display: none;
   }
   
   .sns_page img.person_2 {
-    opacity: 0;
+    display: none;
   }
 
   .sns_page h2 {
     padding-top: 50px;
-    font-size: 20px;
+    font-size: 15px;
+    font-weight: normal;
   }
 
 .sns_page .content_1,
@@ -349,17 +376,13 @@
 
   .sns_page .content_1 .page_link button {
     padding: 10px;
+    z-index: 0;
   }
   
   .sns_page .content_1 .page_link button h4 {
     font-size: 12px;
     font-family: "SCDream7";
     color: white;
-  }
-
-  .sns_page .content_1 .page_link button p {
-    display: inline-block;
-    color: #8d8d8d;
   }
 
   .sns_page .content_2 {
@@ -390,7 +413,7 @@
 .donation h2 {
   margin-top: 20px;
   position: absolute;
-  padding: 0 5%;
+  padding: 0 8%;
   font-size: 15px;
 }
 
@@ -440,30 +463,41 @@ footer .footer_nav {
 }
 
 footer .fo{
-  float: left;
   display: flex;
   justify-content: center;
+  text-align: center;
   width: 100%;
-  padding-top: 20px;
+  padding: 15px 0;
+}
+
+footer .fo_1{
+  text-align: center;
 }
 
 footer .fo_1 .top{
   width: 100%;
-  margin: 0 10px;
+  margin: 0;
 }
 
 footer .fo_1 .bottom{
   width: 100%;
-  display: inline-block;
   margin: 0 auto;
 }
 
 footer .fo_1 h2 {
-  font-size: 12px;
+  text-align: left;
+  font-size: 15px;
+  padding: 0 15px;
 }
 
 footer .fo_1 h3 {
-  font-size: 6px;
+  text-align: right;
+  font-size: 5px;
+  padding: 0 15px;
+}
+
+footer .fo_2{
+  text-align: center;
 }
 
 footer .fo_2 .bottom{
@@ -471,13 +505,21 @@ footer .fo_2 .bottom{
 }
 
 footer .fo_2 h5 {
-  padding: 0 10px;
-  font-size: 6px;
+  padding: 0 15px;
+  font-size: 5px;
 }
 
 footer .fo_2 h4 {
+  padding: 0 15px;
+  font-size: 5px;
+}
+
+footer .fo_3{
+  text-align: center;
+}
+
+footer .fo_3 a{
   padding: 0 10px;
-  font-size: 8px;
 }
 
 footer .fo_3 .bottom{
@@ -486,7 +528,7 @@ footer .fo_3 .bottom{
 
 footer .fo_3 h4 {
   width: 100%;
-  padding: 0 12px;
+  padding: 0;
   font-size: 10px;
 }
 
@@ -495,8 +537,8 @@ footer .fo_4 li{
 }
 
 footer .fo_4 .fo_icon {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   background-size: contain;
 }
 

@@ -39,10 +39,12 @@ a {
     text-decoration: none;
 }
 
+html,
 body {
-    width: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
+  overflow-x: hidden;
+}
+
+body {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;

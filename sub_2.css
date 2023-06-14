@@ -39,10 +39,14 @@ a {
     text-decoration: none;
 }
 
+html,
 body {
+  overflow-x: hidden;
+}
+
+body {
+    overflow: unset;
     width: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -66,6 +70,7 @@ section {
 }
 
 h2 {
+    position: relative;
     transform: translateY(65px);
     font-family: "SCDream9";
     font-size: 24px;
@@ -182,7 +187,7 @@ a.home_but div img:hover {
     z-index: 99;
     width: 1280px;
     margin: 0 auto;
-    padding-top: 10px
+    padding-top: 10px;
 }
 
 .main_left{
