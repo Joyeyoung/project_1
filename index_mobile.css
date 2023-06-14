@@ -102,7 +102,7 @@
 
     .tit_back .tit_content {
       z-index: 1;
-      height: 200px;
+      height: 300px;
     }
 
     .tit_back .tit_back_left {
@@ -111,7 +111,7 @@
     
     .tit_back .tit_back_right {
       width: 250px;
-      bottom: -183px;
+      bottom: -83px;
       right: 0;
     }
     .title .tit_intro {
@@ -125,6 +125,7 @@
       }
       
       .title .tit_img_2 {
+        width: 150px;
         right: 0px;
         left: 30px;
       }
@@ -166,6 +167,8 @@
     }
 
     .title .tit_but {
+        position: absolute;
+        z-index: 99;
         top: 430px;
         left: 50%;
     }
@@ -179,7 +182,6 @@
         width: 100%;
         padding-bottom: 3%;
     }
-
 
     .title .tit_but ul .tit_but_l {
         float: none;
