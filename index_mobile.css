@@ -1,9 +1,4 @@
 @media (max-width: 768px) {
-  
-  body {
-  height: 100%;
-  }
-  
 
     /* 토글메뉴 */
     .side-nav h2 {
@@ -14,8 +9,7 @@
     }
 
     .side-nav>.side-toggle {
-        left: 0 auto;
-        right: 0 auto;
+        right: -44px;
     }
 
     /* 네비게이션 */
