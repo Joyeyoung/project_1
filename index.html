@@ -99,9 +99,9 @@
 
         <div class="tit_but">
             <ul>
-                <li class="tit_but_r"><a href="./sub_1.html"><button id="sub_1">지진 전조증상 &#43;</button></a></li>
-                <li class="tit_but_l"><a href="./sub_2.html"><button id="sub_2">지진 발생 시 &#43;</button></a></li>
-                <li class="tit_but_r"><a href="./sub_3.html"><button>지진 대피 후 &#43;</button></a></li>
+                <li class="tit_but_r"><a href="./sub_1.html"><button id="sub_1" onmouseover="mouseover()" onmouseleave="mouseleave()">지진 전조증상 &#43;</button></a></li>
+                <li class="tit_but_l"><a href="./sub_2.html"><button id="sub_2" onmouseover="mouseover2()" onmouseleave="mouseleave2()">지진 발생 시 &#43;</button></a></li>
+                <li class="tit_but_r"><a href="./sub_3.html"><button id="sub_3" onmouseover="mouseover3()" onmouseleave="mouseleave3()">지진 대피 후 &#43;</button></a></li>
             </ul>
         </div>
 
@@ -135,6 +135,20 @@
         <div class="tit_back">
             <div class="tit_content section scroll-spy">
                 <div class="tit_content_img back-to-postition to-up delay-0">
+                    <img src="./img/tit_content_img.png" alt="">
+
+                    <div class="tit_content_1">
+                        <img src="./img/tit_content_1.png" id="best1">
+                    </div>
+
+                    <div class="tit_content_2">
+                        <img src="./img/tit_content_2.png" id="best2">
+                    </div>
+
+                    <div class="tit_content_3">
+                        <img src="./" display='none' alt='' id="best3">
+                    </div>
+
                 </div>
 
                 <img class="tit_back_left" src="./img/tit_back_left.png" alt="">
@@ -515,6 +529,7 @@
         <p class="fo_bo">본 사이트는 상업적 용도가 아닌 공모전 전용 사이트 입니다.</p>
     </footer>
 
+    <script src="hover.js"></script>
     <script src="scroll.js"></script>
     <script src="gsap.js"></script>
 
