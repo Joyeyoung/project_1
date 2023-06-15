@@ -37,10 +37,22 @@
         margin: -3px;
     }
 
+    nav ul li .ch{
+        border-top: 20px solid #545454;
+        border-right: 20px solid transparent;
+        border-left: 20px solid transparent;
+        opacity: 1;
+    }
+
     nav ul li div {
         border-top: 20px solid #000;
         border-right: 20px solid transparent;
         border-left: 20px solid transparent;
+    }
+
+    #te:hover+#tr {
+        opacity: 1;
+        border-top: 20px solid #000;
     }
 
     .content {
