@@ -71,7 +71,6 @@ section {
 
 h2 {
     position: relative;
-    z-index: 3;
     transform: translateY(65px);
     font-family: "SCDream9";
     font-size: 24px;
@@ -109,16 +108,6 @@ nav ul li a {
     margin: -3px
 }
 
-nav ul li .ch{
-    margin: 0 auto;
-    width: 0px;
-    height: 0px;
-    border-top: 30px solid #545454;
-    border-right: 30px solid transparent;
-    border-left: 30px solid transparent;
-    opacity: 1;
-}
-
 nav ul li div {
     margin: 0 auto;
     width: 0px;
@@ -136,7 +125,6 @@ nav ul li div {
 
 #te:hover+#tr {
     opacity: 1;
-    border-top: 30px solid #000;
 }
 
 a.home_but {
@@ -144,6 +132,7 @@ a.home_but {
     z-index: 999;
     top: 250px;
     left: 100px;
+
 }
 
 a.home_but div {
@@ -170,8 +159,6 @@ a.home_but div img:hover {
 }
 
 .content h1 {
-    position: relative;
-    z-index: 3;
     font-size: 24px;
     color: #ebebeb;
     font-family: "SCDream3";
