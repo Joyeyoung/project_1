@@ -387,6 +387,7 @@ button {
 
 .tit_back .tit_content {
   position: relative;
+  z-index: 0;
   width: 100%;
   height: 1042px;
   transform: translateY(32px);
@@ -396,7 +397,7 @@ button {
 
 .tit_back .tit_content_img {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   height: 100%;
   background-image: url(./img/tit_content_img.png);
@@ -411,12 +412,16 @@ button {
 }
 
 .tit_back .tit_back_left {
+  width: 0 auto;
   bottom: -1px;
   left: 0;
+  z-index: 2;
 }
 
 .tit_back .tit_back_right {
+  z-index: 0;
   right: 0;
+  z-index: 1;
 }
 
 /* 지진 대피장소 */
@@ -753,6 +758,7 @@ td {
 }
 
 .sns_page .content_1 {
+  z-index: 3;
   width: 520px;
 }
 
@@ -813,6 +819,7 @@ td {
 }
 
 .sns_page .content_2 {
+  z-index: 3;
   width: 520px;
   height: 420px;
   text-align: left;
@@ -902,6 +909,7 @@ td {
 }
 
 .donation h2 {
+  width: 100%;
   margin-top: 35px;
   font-family: "SCDream9";
   font-size: 24px;
