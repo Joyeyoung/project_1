@@ -390,6 +390,7 @@ button {
   height: 1042px;
   transform: translateY(32px);
   background-color: #8d8d8d;
+  z-index: 0;
 }
 
 
